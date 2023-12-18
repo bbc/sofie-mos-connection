@@ -56,11 +56,14 @@ export function create(timestamp: AnyValue, strict: boolean): IMOSTime {
 				// empty string, create Date now:
 				time = new Date()
 			}
-		} else if (typeof timestamp === 'object') {
+		} else if (typeof timestamp === 'object' && timestamp !== null) {
 			if (timestamp instanceof Date) {
 				time = timestamp
 			} else if (timestamp?._mosTime !== undefined) {
 				time = new Date(timestamp._mosTime)
+			} else if (Object.keys(timestamp).length === 0) {
+				// empty object, create Date now:
+				time = new Date()
 			} else {
 				throw new Error(`MosTime: Invalid input: "${timestamp}"`)
 			}

@@ -38,8 +38,6 @@ describe('MosTime', () => {
 		expect(() => mosTypes.mosTime.create(date)).toThrow(/Invalid timestamp/)
 		expect(() => mosTypes.mosTime.create('abcd')).toThrowError(/Invalid timestamp/)
 		// @ts-expect-error bad input
-		expect(() => mosTypes.mosTime.create({})).toThrowError(/Invalid input/)
-		// @ts-expect-error bad input
 		expect(() => mosTypes.mosTime.create(null)).toThrowError(/Invalid input/)
 
 		// test input format date, number and various strings
@@ -68,6 +66,9 @@ describe('MosTime', () => {
 		
 		// Empty string
 		expect(typeof toTime('')).toBe('number')
+
+		// Empty object
+		expect(typeof toTime({})).toBe('number')
 	})
 	test('format time strings correctly', () => {
 		const mosTypes = getMosTypes(true)
