@@ -1,4 +1,4 @@
-import { ConnectionType } from './socketConnection'
+import { ConnectionType, SocketConnectionEvent } from './socketConnection'
 import { MosSocketClient, CallBackFunction, QueueMessage } from '../connection/mosSocketClient'
 import { MosModel } from '@mos-connection/helper'
 import { EventEmitter } from 'eventemitter3'
@@ -97,6 +97,10 @@ export class NCSServerConnection extends EventEmitter<NCSServerConnectionEvents>
 		client.on('error', (err: Error) => {
 			err.message = 'MosSocketClient: ' + err.message
 			this.emit('error', err)
+		})
+		client.on(SocketConnectionEvent.DISCONNECTED, () => {
+			// socket close - emit immediately
+			this.emit('connectionChanged')
 		})
 	}
 
@@ -218,6 +222,10 @@ export class NCSServerConnection extends EventEmitter<NCSServerConnectionEvents>
 		Object.values<ClientDescription>(this._clients).forEach((client) => {
 			if (client.useHeartbeats && !client.heartbeatConnected) {
 				notConnectedStatus = `No heartbeats on port ${client.clientDescription}`
+			}
+			if (!client.useHeartbeats && !client.client.connected) {
+				// socket is not connected -> connection is de initely down
+				notConnectedStatus = 'Sockets not connected'
 			}
 		})
 		if (!notConnectedStatus) {

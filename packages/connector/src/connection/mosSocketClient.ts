@@ -288,7 +288,7 @@ export class MosSocketClient extends EventEmitter<MosSocketClientEvents> {
 	}
 
 	/** */
-	private get connected(): boolean {
+	get connected(): boolean {
 		return this._connected
 	}
 

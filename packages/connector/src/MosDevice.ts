@@ -1566,7 +1566,7 @@ export class MosDevice implements IMOSDevice {
 
 	private async executeCommand(message: MosModel.MosMessage, resend?: boolean): Promise<MosReply> {
 		if (this._currentConnection) {
-			this.debugTrace('exec command', message)
+			this.debugTrace('exec command: ' + message.constructor.name, message)
 			if (!this._currentConnection.connected) {
 				return this.switchConnectionsAndExecuteCommand(message)
 			}
