@@ -11,42 +11,29 @@ A dummy MOS (Media Object Server) server for testing MOS clients with failover c
 - Command-line interface for manual testing
 
 ## Installation
-
-1. Clone this repository
-2. Install dependencies:
+Install dependencies:
 
 ```bash
-npm install
+yarn install
 ```
-
-3. Build the project:
-
-```bash
-npm run build
-```
-
-## Usage
-
-### Starting the server
-
-```bash
-npm start
-```
-
-This will start the MOS server on the default ports (10540, 10541, 10542).
 
 ### Development mode
-
 To run in development mode with automatic reloading:
 
 ```bash
-npm run dev
+yarn dev
+```
+
+you can add a --secondary flag to run a secondary server on a different port:
+
+```bash
+yarn dev --secondary
 ```
 
 Or with file watching:
 
 ```bash
-npm run watch
+yarn run watch
 ```
 
 ### Rundown Management
