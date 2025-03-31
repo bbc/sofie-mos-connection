@@ -29,6 +29,7 @@ class DummyMosServer {
 	private rundowns: Map<string, IMOSRunningOrder> = new Map()
 	private isServerOnline = true
 	private mosTypes = getMosTypes(false) // Non-strict mode
+	private primaryDevice = false
 
 	constructor(rundownsDir: string) {
 		this.rundownsDir = rundownsDir
@@ -54,10 +55,12 @@ class DummyMosServer {
 
 	// Handle new MOS device connections
 	private handleNewConnection(mosDevice: MosDevice): void {
-		console.log(`New connection from device: ${mosDevice.idPrimary}`)
+		console.log(
+			`New connection from device: ${this.primaryDevice ? mosDevice.idPrimary : mosDevice.idSecondary || ''}`
+		)
 
 		// Store reference to the device
-		this.devicesMap.set(mosDevice.idPrimary, mosDevice)
+		this.devicesMap.set(this.primaryDevice ? mosDevice.idPrimary : mosDevice.idSecondary || '', mosDevice)
 
 		// Set up callbacks for Profile 0
 		mosDevice.onRequestMachineInfo(async () => {
@@ -350,16 +353,36 @@ class DummyMosServer {
 			return
 		}
 
-		console.log(`Sending ${this.rundowns.size} rundowns to device: ${device.idPrimary}`)
+		console.log(
+			`Sending ${this.rundowns.size} rundowns to device: ${
+				this.primaryDevice ? device.idPrimary : device.idSecondary || ''
+			}`
+		)
 
 		for (const [id, rundown] of this.rundowns) {
 			try {
-				console.log(`Sending rundown to device ${device.idPrimary}: ${id}`)
+				console.log(
+					`Sending rundown to device ${
+						this.primaryDevice ? device.idPrimary : device.idSecondary || ''
+					}: ${id}`
+				)
 				device
 					.sendCreateRunningOrder(rundown)
-					.catch((err) => console.error(`Error sending rundown to device ${device.idPrimary}:`, err))
+					.catch((err) =>
+						console.error(
+							`Error sending rundown to device ${
+								this.primaryDevice ? device.idPrimary : device.idSecondary || ''
+							}:`,
+							err
+						)
+					)
 			} catch (error) {
-				console.error(`Error sending rundown to device ${device.idPrimary}:`, error)
+				console.error(
+					`Error sending rundown to device ${
+						this.primaryDevice ? device.idPrimary : device.idSecondary || ''
+					}:`,
+					error
+				)
 			}
 		}
 	}

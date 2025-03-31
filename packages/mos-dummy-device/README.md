@@ -36,6 +36,32 @@ Or with file watching:
 yarn run watch
 ```
 
+### Run on same machine as client:
+To run on same machine as client, remember to set the clients acceptsConnections to false (here shown in Sofie):
+
+```bash
+mos: {
+		self: {
+			debug: debug,
+			// mosID: 'sofie.tv.automation',
+			mosID: 'N/A', // set by Core
+			acceptsConnections: false, // default:true
+			// accepsConnectionsFrom: ['127.0.0.1'],
+			profiles: {
+				'0': true,
+				'1': true,
+				'2': true,
+				'3': false,
+				'4': false,
+				'5': false,
+				'6': false,
+				'7': false,
+			},
+			offspecFailover: true,
+		},
+```
+
+
 ### Rundown Management
 
 Rundowns are stored as JSON files in the `rundowns` directory. The server watches this directory for changes:
