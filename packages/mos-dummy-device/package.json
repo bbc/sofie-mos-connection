@@ -1,0 +1,19 @@
+{
+    "name": "mos-dummy-server",
+    "version": "1.0.0",
+    "description": "A dummy MOS server for testing MOS clients with failover capabilities",
+    "main": "dist/index.js",
+    "scripts": {
+        "dev": "ts-node src/index.ts"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@mos-connection/connector": "^4.2.2",
+        "chokidar": "^3.5.3"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.5",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.3.3"
+    }
+}
