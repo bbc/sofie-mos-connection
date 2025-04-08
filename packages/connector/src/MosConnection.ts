@@ -130,12 +130,6 @@ export class MosConnection extends EventEmitter<MosConnectionEvents> implements 
 			)
 		}
 
-		// Create the secondary connection if configured
-		const isHotStandby = connectionOptions.secondary?.openMediaHotStandby || false
-		// For hot-standby, initially we need both connections to be able to establish
-		// so we can determine which one is active
-		const useHeartbeatsOnSecondary = !isHotStandby || true
-
 		if (connectionOptions.secondary) {
 			secondary = new NCSServerConnection(
 				connectionOptions.secondary.id,
@@ -164,13 +158,13 @@ export class MosConnection extends EventEmitter<MosConnectionEvents> implements 
 				MosConnection.nextSocketID,
 				connectionOptions.secondary.ports?.lower ?? MosConnection.CONNECTION_PORT_LOWER,
 				'lower',
-				useHeartbeatsOnSecondary
+				!connectionOptions.secondary.openMediaHotStandby
 			)
 			secondary.createClient(
 				MosConnection.nextSocketID,
 				connectionOptions.secondary.ports?.upper ?? MosConnection.CONNECTION_PORT_UPPER,
 				'upper',
-				useHeartbeatsOnSecondary
+				!connectionOptions.secondary.openMediaHotStandby
 			)
 			if (!connectionOptions.primary.dontUseQueryPort) {
 				secondary.createClient(
@@ -180,71 +174,41 @@ export class MosConnection extends EventEmitter<MosConnectionEvents> implements 
 					false
 				)
 			}
-		}
-
-		if (isHotStandby && secondary) {
-			// Check both connections on startup to determine which one to use
-			this.emit('info', 'Initializing with OpenMedia hot-standby configuration')
-
-			primary.connect()
-			secondary.connect()
-			// Wait for initial connection attempts
-			await new Promise((resolve) => setTimeout(resolve, 2000))
-
-			const primaryStatus = primary.getConnectedStatus()
-			const secondaryStatus = secondary.getConnectedStatus()
-
 			// Handle that .openMediaHotStandby should not check for heartbeats on
 			// the secondary connection when the primary is connected
 			// And disable heartbeats on the primary when the primary is disconnected
-			if (primaryStatus.connected) {
-				// Initially disable heartbeats on secondary since primary is connected
+			if (connectionOptions.secondary?.openMediaHotStandby) {
+				// Initially disable heartbeats on secondary since primary should be attempted first
 				secondary.disableHeartbeats()
 				primary.enableHeartbeats()
-			} else if (secondaryStatus.connected) {
-				// Primary is down, but secondary is available - use secondary
-				secondary.enableHeartbeats()
-				primary.disableHeartbeats()
-			} else {
-				// Both are down initially, but try both
-				this.emit('info', 'No connections established, enabling heartbeats on both')
-				primary.enableHeartbeats()
-				secondary.enableHeartbeats()
+
+				primary.on('connectionChanged', () => {
+					if (primary.connected) {
+						secondary?.disableHeartbeats()
+						primary.enableHeartbeats()
+					} else {
+						secondary?.enableHeartbeats()
+						primary.disableHeartbeats()
+					}
+				})
+
+				// Handle secondary connection changes
+				setTimeout(() => {
+					secondary?.on('connectionChanged', () => {
+						if (!primary.connected) {
+							// Secondary is active
+							if (secondary?.connected) {
+								secondary.enableHeartbeats()
+								primary.disableHeartbeats()
+							} else {
+								// Secondary disconnected - try to re-enable primary
+								primary.enableHeartbeats()
+								secondary?.disableHeartbeats()
+							}
+						}
+					})
+				}, 50)
 			}
-
-			// Failover handling:
-			primary.on('connectionChanged', () => {
-				// Refresh connectionstatus
-				const status = primary.getConnectedStatus()
-				if (status.connected) {
-					this.emit('info', 'Primary connection established, switching to primary')
-					secondary?.disableHeartbeats()
-					primary.enableHeartbeats()
-				} else {
-					// Primary disconnected, enable secondary heartbeats
-					this.emit('info', 'Primary disconnected, enabling secondary')
-					secondary?.enableHeartbeats()
-					primary.disableHeartbeats()
-				}
-			})
-
-			secondary.on('connectionChanged', () => {
-				// Refresh connectionstatus
-				const primaryStatus = primary.getConnectedStatus()
-				const secondaryStatus = secondary.getConnectedStatus()
-
-				if (!primaryStatus.connected && secondaryStatus.connected) {
-					// Secondary is active when primary is down
-					this.emit('info', 'Secondary active, primary down')
-					secondary.enableHeartbeats()
-					primary.disableHeartbeats()
-				} else if (!secondaryStatus.connected && !primaryStatus.connected) {
-					// Both are down, try to connect to both
-					this.emit('info', 'Both connections down, attempting reconnection to both')
-					primary.enableHeartbeats()
-					secondary.enableHeartbeats()
-				}
-			})
 		}
 
 		return this._registerMosDevice(
