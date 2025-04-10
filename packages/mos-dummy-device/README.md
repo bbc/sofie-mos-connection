@@ -1,6 +1,9 @@
-# MOS Dummy Server
+# MOS Dummy Device
 
 A dummy MOS (Media Object Server) server for testing MOS clients with failover capabilities. This server implements the MOS protocol and allows you to simulate connection issues and manage rundowns through JSON files.
+
+The mos dummy device is primary made for debugging MOS server connections and failovers.
+For quick ingesting MOS rundowns use quick-mos
 
 ## Features
 

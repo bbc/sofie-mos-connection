@@ -348,6 +348,8 @@ class DummyMosServer {
 
 	// Send all loaded rundowns to a newly connected device
 	private sendAllRunningOrders(device: MosDevice): void {
+		// This part has not been implemented, quickTSR works for now
+		return
 		if (this.rundowns.size === 0) {
 			console.log('No rundowns to send to new device')
 			return
