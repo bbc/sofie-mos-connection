@@ -40,6 +40,7 @@ export class MosConnection extends EventEmitter<MosConnectionEvents> implements 
 	private _mosDevices: { [ncsID: string]: MosDevice } = {}
 	private _initialized = false
 	private _isListening = false
+	private _isOpenMediaHotStandby = false
 
 	// private _isListening: Promise<boolean[]>
 
@@ -81,6 +82,7 @@ export class MosConnection extends EventEmitter<MosConnectionEvents> implements 
 	 */
 	async connect(connectionOptions: IMOSDeviceConnectionOptions): Promise<MosDevice> {
 		if (!this._initialized) throw Error('Not initialized, run .init() first!')
+		this._isOpenMediaHotStandby = connectionOptions.secondary?.openMediaHotStandby ?? false
 
 		// Connect to MOS-device:
 		const primary = new NCSServerConnection(
@@ -90,9 +92,21 @@ export class MosConnection extends EventEmitter<MosConnectionEvents> implements 
 			connectionOptions.primary.timeout,
 			connectionOptions.primary.heartbeatInterval,
 			this._debug,
-			this.mosTypes.strict
+			this.mosTypes.strict,
+			this._isOpenMediaHotStandby
 		)
-		let secondary: NCSServerConnection | null = null
+		const secondary = connectionOptions.secondary
+			? new NCSServerConnection(
+					connectionOptions.secondary.id,
+					connectionOptions.secondary.host,
+					this._conf.mosID,
+					connectionOptions.secondary.timeout,
+					connectionOptions.secondary.heartbeatInterval,
+					this._debug,
+					this.mosTypes.strict,
+					this._isOpenMediaHotStandby
+			  )
+			: null
 		this._ncsConnections[connectionOptions.primary.host] = primary
 
 		primary.on('rawMessage', (type: string, message: string) => {
@@ -130,16 +144,7 @@ export class MosConnection extends EventEmitter<MosConnectionEvents> implements 
 			)
 		}
 
-		if (connectionOptions.secondary) {
-			secondary = new NCSServerConnection(
-				connectionOptions.secondary.id,
-				connectionOptions.secondary.host,
-				this._conf.mosID,
-				connectionOptions.secondary.timeout,
-				connectionOptions.secondary.heartbeatInterval,
-				this._debug,
-				this.mosTypes.strict
-			)
+		if (secondary && connectionOptions.secondary) {
 			this._ncsConnections[connectionOptions.secondary.host] = secondary
 			secondary.on('rawMessage', (type: string, message: string) => {
 				this.emit('rawMessage', 'secondary', type, message)
@@ -506,7 +511,8 @@ export class MosConnection extends EventEmitter<MosConnectionEvents> implements 
 						undefined,
 						undefined,
 						this._debug,
-						this.mosTypes.strict
+						this.mosTypes.strict,
+						this._isOpenMediaHotStandby
 					)
 					this._ncsConnections[remoteAddress] = primary
 
