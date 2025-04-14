@@ -439,16 +439,14 @@ async function main() {
 	await server.start()
 
 	// Handle process termination
-	process.on('SIGINT', async () => {
+	process.on('SIGINT', () => {
 		console.log('Received SIGINT signal')
-		await server.shutdown()
-		process.exit(0)
+		shutdownServerAndExit(server)
 	})
 
-	process.on('SIGTERM', async () => {
+	process.on('SIGTERM', () => {
 		console.log('Received SIGTERM signal')
-		await server.shutdown()
-		process.exit(0)
+		shutdownServerAndExit(server)
 	})
 
 	// Command line interface for manual testing
@@ -457,20 +455,18 @@ async function main() {
 	console.log('  exit - Shutdown the server and exit')
 
 	// Simple command processing
-	process.stdin.on('data', async (data) => {
+	process.stdin.on('data', (data) => {
 		const input = data.toString().trim()
 		const args = input.split(' ')
 		const command = args[0].toLowerCase()
 
 		switch (command) {
 			case 'outage':
-				const duration = parseInt(args[1]) || 5000
-				server.simulateOutage(duration)
+				server.simulateOutage(parseInt(args[1]) || 5000)
 				break
 
 			case 'exit':
-				await server.shutdown()
-				process.exit(0)
+				shutdownServerAndExit(server)
 				break
 
 			default:
@@ -479,9 +475,23 @@ async function main() {
 		}
 	})
 }
+function shutdownServerAndExit(server: DummyMosServer) {
+	server
+		.shutdown()
+		.then(() => {
+			// eslint-disable-next-line no-process-exit
+			process.exit(0)
+		})
+		.catch((e) => {
+			console.error('Error shutting down server:', e)
+			// eslint-disable-next-line no-process-exit
+			process.exit(1)
+		})
+}
 
 // Run the application
 main().catch((error) => {
 	console.error('Fatal error:', error)
+	// eslint-disable-next-line no-process-exit
 	process.exit(1)
 })
