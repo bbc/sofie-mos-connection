@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0-alpha.0](https://github.com/nrkno/sofie-mos-connection/compare/v4.2.2...v4.3.0-alpha.0) (2025-04-14)
+
+
+### Bug Fixes
+
+* in hotstandby - use secondary device upon start ([2d1a69e](https://github.com/nrkno/sofie-mos-connection/commit/2d1a69ed1b4792ced5de1f84afc9034b0cb48035))
+
+
+
+
+
 ## [4.2.2](https://github.com/nrkno/sofie-mos-connection/compare/v4.2.2-alpha.0...v4.2.2) (2025-01-22)
 
 
