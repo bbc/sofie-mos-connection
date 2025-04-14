@@ -1,0 +1,82 @@
+{
+  "ID": "EXAMPLE_RO",
+  "Slug": "Example Rundown",
+  "DefaultChannel": "A",
+  "Stories": [
+    {
+      "ID": "EXAMPLE_RO_STORY_1",
+      "Slug": "Opening Story",
+      "Number": "1",
+      "Items": [
+        {
+          "ID": "EXAMPLE_RO_STORY_1_ITEM_1",
+          "Slug": "Intro Graphic",
+          "ObjectID": "OBJ_INTRO_GRAPHIC",
+          "MOSID": "DUMMY.MOS.SERVER",
+          "ObjectSlug": "Opening Title Graphic",
+          "Duration": 500,
+          "TimeBase": 100
+        },
+        {
+          "ID": "EXAMPLE_RO_STORY_1_ITEM_2",
+          "Slug": "Presenter Introduction",
+          "ObjectID": "OBJ_PRESENTER_CAM1",
+          "MOSID": "DUMMY.MOS.SERVER",
+          "ObjectSlug": "Camera 1 - Wide",
+          "Duration": 1000,
+          "TimeBase": 100
+        }
+      ]
+    },
+    {
+      "ID": "EXAMPLE_RO_STORY_2",
+      "Slug": "News Story",
+      "Number": "2",
+      "Items": [
+        {
+          "ID": "EXAMPLE_RO_STORY_2_ITEM_1",
+          "Slug": "News Intro",
+          "ObjectID": "OBJ_NEWS_GRAPHIC",
+          "MOSID": "DUMMY.MOS.SERVER",
+          "ObjectSlug": "News Title Card",
+          "Duration": 300,
+          "TimeBase": 100
+        },
+        {
+          "ID": "EXAMPLE_RO_STORY_2_ITEM_2",
+          "Slug": "News Package",
+          "ObjectID": "OBJ_NEWS_PKG_1",
+          "MOSID": "DUMMY.MOS.SERVER",
+          "ObjectSlug": "News Package Video",
+          "Duration": 3000,
+          "TimeBase": 100
+        }
+      ]
+    },
+    {
+      "ID": "EXAMPLE_RO_STORY_3",
+      "Slug": "Closing Story",
+      "Number": "3",
+      "Items": [
+        {
+          "ID": "EXAMPLE_RO_STORY_3_ITEM_1",
+          "Slug": "Closing Remarks",
+          "ObjectID": "OBJ_PRESENTER_CAM2",
+          "MOSID": "DUMMY.MOS.SERVER",
+          "ObjectSlug": "Camera 2 - Close Up",
+          "Duration": 1500,
+          "TimeBase": 100
+        },
+        {
+          "ID": "EXAMPLE_RO_STORY_3_ITEM_2",
+          "Slug": "Outro Graphic",
+          "ObjectID": "OBJ_OUTRO_GRAPHIC",
+          "MOSID": "DUMMY.MOS.SERVER",
+          "ObjectSlug": "Closing Credits",
+          "Duration": 800,
+          "TimeBase": 100
+        }
+      ]
+    }
+  ]
+}

@@ -128,7 +128,8 @@ describe('Hot Standby Feature', () => {
 
 		if (primary && secondary) {
 			expect(primary.getConnectedStatus().connected).toBe(true)
-			expect(secondary.getConnectedStatus().connected).toBe(true)
+			// Hot standby only connects one connection at a time:
+			expect(secondary.getConnectedStatus().connected).toBe(false)
 
 			// Verify heartbeat states
 			expect(primary.isHearbeatEnabled()).toBe(true)
@@ -142,7 +143,7 @@ describe('Hot Standby Feature', () => {
 
 		if (primary && secondary) {
 			expect(primary.connected).toBe(true)
-			expect(secondary.connected).toBe(true)
+			expect(secondary.connected).toBe(false)
 
 			// Disconnect primary connection:
 			await discconnectPrimary()
@@ -172,7 +173,8 @@ describe('Hot Standby Feature', () => {
 		if (primary && secondary) {
 			// Initially, primary should be connected and secondary should be connected but with heartbeats disabled
 			expect(primary.connected).toBe(true)
-			expect(secondary.connected).toBe(true)
+			// Hot standby only connects one connection at a time:
+			expect(secondary.connected).toBe(false)
 			expect(primary.isHearbeatEnabled()).toBe(true)
 			expect(secondary.isHearbeatEnabled()).toBe(false)
 
@@ -204,7 +206,8 @@ describe('Hot Standby Feature', () => {
 		if (primary && secondary) {
 			// Initially, both should be connected with primary heartbeats enabled and secondary disabled
 			expect(primary.connected).toBe(true)
-			expect(secondary.connected).toBe(true)
+			// Hot standby only connects one connection at a time:
+			expect(secondary.connected).toBe(false)
 			expect(primary.isHearbeatEnabled()).toBe(true)
 			expect(secondary.isHearbeatEnabled()).toBe(false)
 
@@ -234,9 +237,10 @@ describe('Hot Standby Feature', () => {
 		expect(secondary).toBeTruthy()
 
 		if (primary && secondary) {
-			// Initial setup - primary connected and secondary connected but with heartbeats disabled
+			// Initial setup - primary connected and secondary not but with heartbeats disabled
 			expect(primary.connected).toBe(true)
-			expect(secondary.connected).toBe(true)
+			// Hot standby only connects one connection at a time:
+			expect(secondary.connected).toBe(false)
 
 			// First disconnect primary to force secondary active
 			await discconnectPrimary()

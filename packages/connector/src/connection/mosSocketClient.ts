@@ -131,6 +131,10 @@ export class MosSocketClient extends EventEmitter<MosSocketClientEvents> {
 		}
 	}
 
+	get isConnected(): boolean {
+		return this._connected
+	}
+
 	/** */
 	disconnect(): void {
 		this.dispose()
