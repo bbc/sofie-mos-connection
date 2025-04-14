@@ -14,6 +14,7 @@ For quick ingesting MOS rundowns use quick-mos
 - Command-line interface for manual testing
 
 ## Installation
+
 Install dependencies:
 
 ```bash
@@ -21,6 +22,7 @@ yarn install
 ```
 
 ### Development mode
+
 To run in development mode with automatic reloading:
 
 ```bash
@@ -40,6 +42,7 @@ yarn run watch
 ```
 
 ### Run on same machine as client:
+
 To run on same machine as client, remember to set the clients acceptsConnections to false (here shown in Sofie):
 
 ```bash
@@ -64,7 +67,6 @@ mos: {
 		},
 ```
 
-
 ### Rundown Management
 
 Rundowns are stored as JSON files in the `rundowns` directory. The server watches this directory for changes:
@@ -79,27 +81,27 @@ Here's an example of a rundown JSON file:
 
 ```json
 {
-  "ID": "EXAMPLE_RO",
-  "Slug": "Example Rundown",
-  "DefaultChannel": "A",
-  "Stories": [
-    {
-      "ID": "EXAMPLE_RO_STORY_1",
-      "Slug": "Story 1",
-      "Number": "1",
-      "Items": [
-        {
-          "ID": "EXAMPLE_RO_STORY_1_ITEM_1",
-          "Slug": "Item 1 in Story 1",
-          "ObjectID": "OBJ_EXAMPLE_RO_STORY_1_ITEM_1",
-          "MOSID": "DUMMY.MOS.SERVER",
-          "ObjectSlug": "Item 1 in Story 1",
-          "Duration": 1000,
-          "TimeBase": 100
-        }
-      ]
-    }
-  ]
+	"ID": "EXAMPLE_RO",
+	"Slug": "Example Rundown",
+	"DefaultChannel": "A",
+	"Stories": [
+		{
+			"ID": "EXAMPLE_RO_STORY_1",
+			"Slug": "Story 1",
+			"Number": "1",
+			"Items": [
+				{
+					"ID": "EXAMPLE_RO_STORY_1_ITEM_1",
+					"Slug": "Item 1 in Story 1",
+					"ObjectID": "OBJ_EXAMPLE_RO_STORY_1_ITEM_1",
+					"MOSID": "DUMMY.MOS.SERVER",
+					"ObjectSlug": "Item 1 in Story 1",
+					"Duration": 1000,
+					"TimeBase": 100
+				}
+			]
+		}
+	]
 }
 ```
 
