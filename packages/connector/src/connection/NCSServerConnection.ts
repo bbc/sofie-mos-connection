@@ -11,7 +11,6 @@ export interface ClientDescription {
 	heartbeatConnected: boolean
 	client: MosSocketClient
 	clientDescription: MosModel.PortType
-	isConnected: () => boolean
 }
 
 export interface INCSServerConnection {
@@ -69,7 +68,7 @@ export class NCSServerConnection extends EventEmitter<NCSServerConnectionEvents>
 		this._connected = false
 		this._debug = debug ?? false
 		this._strict = strict ?? false
-		this._isOpenMediaHotStandby = isOpenMediaHotStandby ?? false
+		this._isOpenMediaHotStandby = isOpenMediaHotStandby
 	}
 	get timeout(): number {
 		return this._timeout
@@ -91,9 +90,6 @@ export class NCSServerConnection extends EventEmitter<NCSServerConnectionEvents>
 			heartbeatConnected: false,
 			client: client,
 			clientDescription: clientDescription,
-			isConnected: () => {
-				return client.isConnected
-			},
 		}
 		client.on('rawMessage', (type: string, message: string) => {
 			this.emit('rawMessage', type, message)
@@ -231,26 +227,45 @@ export class NCSServerConnection extends EventEmitter<NCSServerConnectionEvents>
 			}
 		}
 
-		let isConnectedToSomeDevice = false
+		if (this._isOpenMediaHotStandby) {
+			// In OpenMedia Standby mode
 
-		let notConnectedStatus: string | undefined = undefined
-		Object.values<ClientDescription>(this._clients).forEach((client) => {
-			if (client.isConnected()) {
-				isConnectedToSomeDevice = true
+			let isConnectedToSomeDevice = false
+			for (const client of Object.values<ClientDescription>(this._clients)) {
+				if (client.client.isConnected) {
+					isConnectedToSomeDevice = true
+				}
 			}
-			if (client.useHeartbeats && !client.heartbeatConnected && !this._isOpenMediaHotStandby) {
-				notConnectedStatus = `No heartbeats on port ${client.clientDescription}`
-			}
-		})
-		if (!notConnectedStatus && isConnectedToSomeDevice) {
-			return {
-				connected: true,
-				status: 'Connected',
+			if (isConnectedToSomeDevice) {
+				return {
+					connected: true,
+					status: 'Connected',
+				}
+			} else {
+				return {
+					connected: false,
+					status: 'No heartbeats on any connected client',
+				}
 			}
 		} else {
-			return {
-				connected: false,
-				status: notConnectedStatus || 'No heartbeats',
+			// In normal mode
+
+			let notConnectedStatus: string | undefined = undefined
+			for (const client of Object.values<ClientDescription>(this._clients)) {
+				if (client.useHeartbeats && !client.heartbeatConnected) {
+					notConnectedStatus = `No heartbeats on port ${client.clientDescription}`
+				}
+			}
+			if (!notConnectedStatus) {
+				return {
+					connected: true,
+					status: 'Connected',
+				}
+			} else {
+				return {
+					connected: false,
+					status: notConnectedStatus,
+				}
 			}
 		}
 	}
