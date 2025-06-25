@@ -12,6 +12,9 @@ async function run() {
 	await removeFile('packages/quick-mos/CHANGELOG.md')
 	await fixPackageVersion('packages/quick-mos/package.json')
 
+	await removeFile('packages/mos-dummy-device/CHANGELOG.md')
+	await fixPackageVersion('packages/mos-dummy-device/package.json')
+
 	await commit()
 }
 
