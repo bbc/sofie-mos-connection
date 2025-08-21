@@ -1561,7 +1561,7 @@ export class MosDevice implements IMOSDevice {
 	/** Does a check if the specified profile is set, and throws otherwise */
 	private checkProfile(methodName: string, profile: keyof IProfiles) {
 		if (this.strict && !this.supportedProfiles[profile])
-			throw new Error(`"${methodName}" cannot be set while "Profile 2" is not enabled.`)
+			throw new Error(`"${methodName}" cannot be set while "${profile}" is not enabled.`)
 	}
 
 	private async executeCommand(message: MosModel.MosMessage, resend?: boolean): Promise<MosReply> {
