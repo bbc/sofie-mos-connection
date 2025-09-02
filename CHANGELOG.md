@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.1](https://github.com/nrkno/tv-automation-mos-connection/compare/v4.3.0...v4.3.1) (2025-09-02)
+
+
+### Bug Fixes
+
+* convertEmptyObjectToString should not convert empry array to string ([27e22c7](https://github.com/nrkno/tv-automation-mos-connection/commit/27e22c7d2ac2e7532a21046c70dd48521a538444))
+* handle empty mosID in acks ([#113](https://github.com/nrkno/tv-automation-mos-connection/issues/113)) ([7d01b46](https://github.com/nrkno/tv-automation-mos-connection/commit/7d01b46aa66c01b17c17de1675fcec4067ae8171))
+* typo in checkProfile ([0d09082](https://github.com/nrkno/tv-automation-mos-connection/commit/0d0908271290e70e0fe399836f0ffb0b258d8e89))
+
+
+
+
+
 # [4.3.0](https://github.com/nrkno/tv-automation-mos-connection/compare/v4.3.0-alpha.1...v4.3.0) (2025-06-25)
 
 **Note:** Version bump only for package mos-connection-monorepo
