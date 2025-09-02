@@ -165,7 +165,7 @@ export function xml2js(messageString: string): MosModel.AnyXMLObject {
 			}
 		}
 	}
-	// concatChildrenAndTraverseObject(object)
+	concatChildrenAndTraverseObject(object)
 
 	const mosObject = object.mos as MosModel.AnyXMLObject | undefined
 	if (mosObject?.mosID !== undefined) {
