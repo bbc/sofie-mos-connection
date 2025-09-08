@@ -73,6 +73,7 @@ export class MosSocketClient extends EventEmitter<MosSocketClientEvents> {
 
 		this.messageParser = new MosMessageParser(description)
 		this.messageParser.debug = this._debug
+		this.messageParser.on('error', (err: Error) => this.emit('error', err))
 		this.messageParser.on('message', (message: ParsedMosMessage, messageString: string) => {
 			this._handleMessage(message, messageString)
 		})
