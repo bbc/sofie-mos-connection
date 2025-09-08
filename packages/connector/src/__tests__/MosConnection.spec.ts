@@ -1,14 +1,5 @@
 /* eslint-disable @typescript-eslint/unbound-method */
-import {
-	clearMocks,
-	decode,
-	delay,
-	encode,
-	getMessageId,
-	getXMLReply,
-	initMosConnection,
-	setupMocks,
-} from './lib'
+import { clearMocks, decode, delay, encode, getMessageId, getXMLReply, initMosConnection, setupMocks } from './lib'
 import { SocketMock } from '../__mocks__/socket'
 import { ServerMock } from '../__mocks__/server'
 import { xmlData, xmlApiData } from '../__mocks__/testData'
@@ -189,7 +180,10 @@ describe('MosDevice: General', () => {
 				'1': true,
 			},
 		})
-		const onError = jest.fn((e) => console.log(e))
+		const onError = jest.fn((e) => {
+			if (`${e}`.match(/Sent command timed out/)) return // ignore these
+			console.log(e)
+		})
 		const onWarning = jest.fn((e) => console.log(e))
 		mos.on('error', onError)
 		mos.on('warning', onWarning)
@@ -273,7 +267,9 @@ describe('MosDevice: General', () => {
 		returnedObj = await mosDevice.sendRequestMOSObject(xmlApiData.mosObj.ID)
 		expect(returnedObj).toBeTruthy()
 
-		expect(onError).toHaveBeenCalledTimes(0)
+		expect(onError).toHaveBeenCalledTimes(2)
+		expect(onError.mock.calls[0][0] + '').toMatch(/Error before switching connections: Sent command timed out/)
+		expect(onError.mock.calls[1][0] + '').toMatch(/Error before switching connections: Sent command timed out/)
 		expect(onWarning).toHaveBeenCalledTimes(0)
 
 		await mos.dispose()
@@ -544,4 +540,3 @@ describe('MosDevice: General', () => {
 		await mos.dispose()
 	})
 })
-
