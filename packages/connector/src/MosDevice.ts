@@ -1,6 +1,6 @@
 import { Socket } from 'net'
 import { NCSServerConnection } from './connection/NCSServerConnection'
-
+import { EventEmitter } from 'eventemitter3'
 import {
 	IMOSObject,
 	IMOSRunningOrder,
@@ -42,7 +42,12 @@ import { XMLMosListSearchableSchema, XMLMosObjectList, isXMLObject } from '@mos-
 
 const { ensureXMLObject, ensureArray, ensureSingular, ensureSingularArray } = MosModel
 
-export class MosDevice implements IMOSDevice {
+export interface MosDeviceEvents {
+	info: (message: string, data?: any) => void
+	warning: (message: string) => void
+	error: (error: Error) => void
+}
+export class MosDevice extends EventEmitter<MosDeviceEvents> implements IMOSDevice {
 	// private _host: string
 	socket: Socket
 	manufacturer: IMOSString128
@@ -147,6 +152,7 @@ export class MosDevice implements IMOSDevice {
 		offSpecFailover: boolean,
 		strict: boolean
 	) {
+		super()
 		// this._id = this.mosTypes.mosString128.create(connectionConfig.mosID).toString()
 		this._idPrimary = idPrimary
 		this._idSecondary = idSecondary
@@ -1576,7 +1582,16 @@ export class MosDevice implements IMOSDevice {
 				return this._ensureReply(reply)
 			} catch (e) {
 				this.debugTrace('errored', e)
+
 				if (this._primaryConnection && this._secondaryConnection && !resend) {
+					// We do have a primary & buddy, we can try to switch:
+
+					// Emit the original error first, otherwise it would've gotten lost:
+					const error = e instanceof Error ? e : new Error(`${e}`)
+					error.message = `Error before switching connections: ${error.message}`
+
+					this.emit('error', error)
+
 					return this.switchConnectionsAndExecuteCommand(message)
 				} else {
 					throw e
@@ -1605,6 +1620,11 @@ export class MosDevice implements IMOSDevice {
 		// Switch:
 		this._currentConnection = otherConnection
 		otherConnection = currentConnection // former current connection
+
+		this.emit(
+			'info',
+			`Switching connection to ${this._currentConnection === this._primaryConnection ? 'primary' : 'secondary'}`
+		)
 
 		otherConnection.handOverQueue(this._currentConnection)
 	}

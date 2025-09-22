@@ -2,6 +2,7 @@ import { EventEmitter } from 'eventemitter3'
 import { MosModel, xml2js } from '@mos-connection/helper'
 
 export interface MosMessageParserEvents {
+	error: (error: Error) => void
 	message: (parsedData: ParsedMosMessage, messageString: string) => void
 }
 export class MosMessageParser extends EventEmitter<MosMessageParserEvents> {
@@ -122,18 +123,24 @@ export class MosMessageParser extends EventEmitter<MosMessageParserEvents> {
 					data: data,
 					messageString,
 				}
+
+				this.emit('message', parsed.data, parsed.messageString)
 			}
 		} catch (err) {
-			// eslint-disable-next-line no-console
-			console.log('dataChunks-------------\n' + this.dataChunks)
-			// eslint-disable-next-line no-console
-			console.log('messageString---------\n' + messageString)
-			// this.emit('error', e)
+			// Something went seriously wrong, it's either invalid incoming mos data, or an internal parsing error..
+			// We cannot do much about this, so emit an error and move on..
 
-			throw err
-		}
-		if (parsed) {
-			this.emit('message', parsed.data, parsed.messageString)
+			// eslint-disable-next-line no-console
+			// console.log('dataChunks-------------\n' + this.dataChunks)
+			// eslint-disable-next-line no-console
+			// console.log('messageString---------\n' + messageString)
+
+			this.emit(
+				'error',
+				new Error(
+					`Crash when parsing. DataChunks: ${this.dataChunks}, messageString: ${messageString}, error: ${err}`
+				)
+			)
 		}
 	}
 	private debugTrace(str: string) {
