@@ -12,7 +12,7 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"@mos-connection/connector": "4.3.1",
+		"@mos-connection/connector": "4.3.2",
 		"chokidar": "^3.5.3"
 	},
 	"devDependencies": {

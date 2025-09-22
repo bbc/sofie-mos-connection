@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.2](https://github.com/nrkno/sofie-mos-connection/compare/v4.3.1...v4.3.2) (2025-09-22)
+
+
+### Bug Fixes
+
+* emit errors from the MosDevice or MosMessageParser if there is a fundamental issue with parsing incoming data ([df8618f](https://github.com/nrkno/sofie-mos-connection/commit/df8618fa487f078c810996395324532df7505b19))
+
+
+
+
+
 ## [4.3.1](https://github.com/nrkno/sofie-mos-connection/compare/v4.3.0...v4.3.1) (2025-09-02)
 
 
