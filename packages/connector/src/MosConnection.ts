@@ -382,11 +382,6 @@ export class MosConnection extends EventEmitter<MosConnectionEvents> implements 
 		)
 		mosDevice.setDebug(this._debug)
 
-		// Just pipe through any emitted events:
-		mosDevice.on('error', (e) => this.emit('error', e))
-		mosDevice.on('warning', (msg) => this.emit('warning', msg))
-		mosDevice.on('info', (msg, data) => this.emit('info', msg, data))
-
 		// Add mosDevice to register:
 		if (this._mosDevices[id0]) {
 			throw new Error('Unable to register MosDevice "' + id0 + '": The device already exists!')
@@ -394,6 +389,12 @@ export class MosConnection extends EventEmitter<MosConnectionEvents> implements 
 		if (id1 && this._mosDevices[id1]) {
 			throw new Error('Unable to register MosDevice "' + id1 + '": The device already exists!')
 		}
+
+		// Just pipe through any emitted events:
+		mosDevice.on('error', (e) => this.emit('error', e))
+		mosDevice.on('warning', (msg) => this.emit('warning', msg))
+		mosDevice.on('info', (msg, data) => this.emit('info', msg, data))
+
 		this._mosDevices[id0] = mosDevice
 		if (id1) this._mosDevices[id1] = mosDevice
 		mosDevice.connect()

@@ -141,8 +141,6 @@ export class MosMessageParser extends EventEmitter<MosMessageParserEvents> {
 					`Crash when parsing. DataChunks: ${this.dataChunks}, messageString: ${messageString}, error: ${err}`
 				)
 			)
-
-			parsed = null
 		}
 	}
 	private debugTrace(str: string) {
