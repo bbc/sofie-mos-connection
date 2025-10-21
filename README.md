@@ -1,7 +1,7 @@
 # MOS-Connection
 
-[![Tests](https://github.com/nrkno/sofie-mos-connection/actions/workflows/node.yaml/badge.svg)](https://github.com/nrkno/sofie-mos-connection/actions/workflows/node.yaml)
-[![codecov](https://codecov.io/gh/nrkno/sofie-mos-connection/branch/main/graph/badge.svg?token=LQL02uXajF)](https://codecov.io/gh/nrkno/sofie-mos-connection)
+[![Tests](https://github.com/Sofie-Automation/sofie-mos-connection/actions/workflows/node.yaml/badge.svg)](https://github.com/Sofie-Automation/sofie-mos-connection/actions/workflows/node.yaml)
+[![codecov](https://codecov.io/gh/Sofie-Automation/sofie-mos-connection/branch/main/graph/badge.svg?token=LQL02uXajF)](https://codecov.io/gh/Sofie-Automation/sofie-mos-connection)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nrkno_tv-automation-mos-connection&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=nrkno_tv-automation-mos-connection)
 
 [![@mos-connection/connector NPM Version](https://img.shields.io/npm/v/%40mos-connection%2Fconnector)](https://www.npmjs.com/package/@mos-connection/connector)
@@ -17,12 +17,12 @@ Features include:
 - Helpful tools for developing _MOS Plugins_ and parsing MOS data.
 - A simple tool for testing MOS connections, called _Quick-MOS_.
 
-This library is developed as a part of the [**Sofie** TV Automation System](https://github.com/nrkno/Sofie-TV-automation/).
+This library is developed as a part of the [**Sofie** TV Automation System](https://github.com/Sofie-Automation/Sofie-TV-automation/).
 
 ## General Sofie System Information
 
-- [_Sofie_ Documentation](https://nrkno.github.io/sofie-core/)
-- [_Sofie_ Releases](https://nrkno.github.io/sofie-core/releases)
+- [_Sofie_ Documentation](https://Sofie-Automation.github.io/sofie-core/)
+- [_Sofie_ Releases](https://Sofie-Automation.github.io/sofie-core/releases)
 - [Contribution Guidelines](CONTRIBUTING.md)
 - [License](LICENSE)
 
