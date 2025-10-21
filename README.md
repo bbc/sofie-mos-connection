@@ -1,7 +1,7 @@
 # MOS-Connection
 
 [![Tests](https://github.com/nrkno/sofie-mos-connection/actions/workflows/node.yaml/badge.svg)](https://github.com/nrkno/sofie-mos-connection/actions/workflows/node.yaml)
-[![codecov](https://codecov.io/gh/nrkno/sofie-mos-connection/branch/master/graph/badge.svg?token=LQL02uXajF)](https://codecov.io/gh/nrkno/sofie-mos-connection)
+[![codecov](https://codecov.io/gh/nrkno/sofie-mos-connection/branch/main/graph/badge.svg?token=LQL02uXajF)](https://codecov.io/gh/nrkno/sofie-mos-connection)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nrkno_tv-automation-mos-connection&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=nrkno_tv-automation-mos-connection)
 
 [![@mos-connection/connector NPM Version](https://img.shields.io/npm/v/%40mos-connection%2Fconnector)](https://www.npmjs.com/package/@mos-connection/connector)
