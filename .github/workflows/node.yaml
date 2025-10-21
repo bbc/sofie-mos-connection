@@ -29,9 +29,9 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Prepare Environment
-        run: yarn
-        env:
-          CI: true
+        run: |
+          corepack enable
+          yarn install
       - name: Type check
         run: yarn build
         env:
@@ -43,13 +43,12 @@ jobs:
           CI: true
 
   test:
-    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
+    name: Test on node ${{ matrix.node_version }}
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        node_version: ['14', '16', '18', '20']
-        os: [ubuntu-latest] # [windows-latest, macOS-latest]
+        node_version: ['14', '16', '18', '20', '22', '24']
 
     timeout-minutes: 5
     steps:
@@ -69,7 +68,8 @@ jobs:
 
       - name: Prepare Environment
         run: |
-          yarn
+          corepack enable
+          yarn install
           yarn build
         env:
           CI: true
@@ -99,6 +99,7 @@ jobs:
           node-version: 16
       - name: Prepare Environment
         run: |
+          corepack enable
           yarn install
         env:
           CI: true
@@ -132,6 +133,8 @@ jobs:
       - name: Check release is desired
         id: do-publish
         run: |
+          corepack enable
+
           if [ -z "${{ secrets.NPM_TOKEN }}" ]; then
             echo "No Token"
           else
