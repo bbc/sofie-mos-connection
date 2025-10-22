@@ -105,7 +105,7 @@ export class MosConnection extends EventEmitter<MosConnectionEvents> implements 
 					this._debug,
 					this.mosTypes.strict,
 					this._isOpenMediaHotStandby
-			  )
+				)
 			: null
 		this._ncsConnections[connectionOptions.primary.host] = primary
 

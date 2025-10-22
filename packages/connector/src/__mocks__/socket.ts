@@ -261,7 +261,7 @@ export class SocketMock extends EventEmitter implements Socket {
 		this._responses.push(cb)
 	}
 	mockClear(): void {
-		this._responses.splice(0, 9999)
+		void this._responses.splice(0, 9999)
 		// @ts-expect-error mock hack
 		this.mockSentMessage0['mockClear']()
 		// @ts-expect-error mock hack

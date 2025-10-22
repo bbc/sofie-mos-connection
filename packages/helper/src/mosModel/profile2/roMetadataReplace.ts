@@ -4,7 +4,10 @@ import { MosMessage } from '../MosMessage.js'
 import { XMLRunningOrderBase } from './xmlConversion.js'
 
 export class ROMetadataReplace extends MosMessage {
-	constructor(private metadata: IMOSRunningOrderBase, strict: boolean) {
+	constructor(
+		private metadata: IMOSRunningOrderBase,
+		strict: boolean
+	) {
 		super('upper', strict)
 	}
 	get messageXMLBlocks(): XMLBuilder.XMLElement {

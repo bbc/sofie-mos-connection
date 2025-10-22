@@ -37,7 +37,7 @@ describe('stringifyMosObject', () => {
 					time: IMOSTime
 					num: number
 					date: Date
-				}
+				},
 			]
 		}
 		type Astr = {
@@ -63,7 +63,7 @@ describe('stringifyMosObject', () => {
 					time: string
 					num: number
 					date: Date
-				}
+				},
 			]
 		}
 

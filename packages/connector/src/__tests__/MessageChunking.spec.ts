@@ -233,8 +233,7 @@ describe('message chunking', () => {
 	})
 
 	test('incoming chunked message', async () => {
-		let onRequestMOSObject: jest.Mock<any, any>
-		onRequestMOSObject = jest.fn(async () => {
+		const onRequestMOSObject = jest.fn(async (_objId: string) => {
 			return xmlApiData.mosObj
 		})
 		onRequestMOSObject.mockClear()
@@ -256,8 +255,7 @@ describe('message chunking', () => {
 	})
 
 	test('multiple mos tags', async () => {
-		let onRequestMOSObject: jest.Mock<any, any>
-		onRequestMOSObject = jest.fn(async () => {
+		const onRequestMOSObject = jest.fn(async (_objId: string) => {
 			return xmlApiData.mosObj
 		})
 		onRequestMOSObject.mockClear()
@@ -291,8 +289,7 @@ describe('message chunking', () => {
 		expect(onRequestMOSObject).toHaveBeenCalledTimes(1)
 	})
 	test('multiple messages', async () => {
-		let onRequestMOSObject: jest.Mock<any, any>
-		onRequestMOSObject = jest.fn(async () => {
+		const onRequestMOSObject = jest.fn(async (_objId: string) => {
 			return xmlApiData.mosObj
 		})
 		onRequestMOSObject.mockClear()

@@ -1658,7 +1658,7 @@ export class MosDevice extends EventEmitter<MosDeviceEvents> implements IMOSDevi
 				// Try again in non-strict mode, to append a sidecar to the thrown error if possible:
 				try {
 					nonStrictReturnValue = fcn(false)
-				} catch (e2) {
+				} catch (_e2) {
 					// ignore error
 					nonStrictReturnValue = undefined
 				}
@@ -1677,7 +1677,7 @@ export class MosDevice extends EventEmitter<MosDeviceEvents> implements IMOSDevi
 					roAck.Status
 				)}, ID: ${this.mosTypes.mosString128.stringify(roAck.ID)}`
 			)
-		} catch (e) {
+		} catch (_e) {
 			return new Error(`Reply: Unparsable reply: ${safeStringify(xmlRoAck).slice(0, 200)}`)
 		}
 	}
@@ -1696,14 +1696,18 @@ export class MosDevice extends EventEmitter<MosDeviceEvents> implements IMOSDevi
 				throw new Error('Main server back on line but not yet updated with most recent data')
 			}
 			if (roAck.status === 'NACK') {
-				throw new Error(`Error in response: ${roAck.statusDescription || 'No statusDescription given'}`)
+				throw new Error(
+					`Error in response: ${(roAck.statusDescription as string) || 'No statusDescription given'}`
+				)
 			}
 		}
 
 		if (replyMos.mosAck) {
 			const mosAck = MosModel.ensureXMLObject(replyMos.mosAck, this.strict)
 			if (mosAck.status === 'NACK') {
-				throw new Error(`Error in response: ${mosAck.statusDescription || 'No statusDescription given'}`)
+				throw new Error(
+					`Error in response: ${(mosAck.statusDescription as string) || 'No statusDescription given'}`
+				)
 			}
 		}
 

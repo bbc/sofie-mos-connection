@@ -1,6 +1,6 @@
 import * as XMLBuilder from 'xmlbuilder'
 import { xmlToObject } from '../../../utils/Utils.js'
-import { XMLMosItem } from '../.js'
+import { XMLMosItem } from '../index.js'
 import { getMosTypes, IMOSItem, IMOSObjectPathType, IMOSScope } from '@mos-connection/model'
 
 describe('XMLMosItem', () => {

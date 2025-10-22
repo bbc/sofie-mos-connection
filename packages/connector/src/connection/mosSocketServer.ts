@@ -89,7 +89,7 @@ export class MosSocketServer extends EventEmitter<MosSocketServerEvents> {
 
 				this._socketServer.listen(this._port)
 			} catch (e) {
-				reject(e)
+				reject(e instanceof Error ? e : new Error(`${e}`))
 			}
 		})
 	}

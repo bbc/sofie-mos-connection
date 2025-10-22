@@ -12,7 +12,10 @@ export abstract class MosMessage {
 
 	protected readonly mosTypes: MosTypes
 
-	constructor(public port: PortType, protected readonly strict: boolean) {
+	constructor(
+		public port: PortType,
+		protected readonly strict: boolean
+	) {
 		this.mosTypes = getMosTypes(strict)
 	}
 

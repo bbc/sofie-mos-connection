@@ -1,3 +1,4 @@
+/* eslint-disable jest/no-conditional-expect */
 import { MosConnection } from '../MosConnection.js'
 import { getMosConnection, setupMocks } from './lib.js'
 import { NCSServerConnection } from '../connection/NCSServerConnection.js'
@@ -282,7 +283,7 @@ describe('Hot Standby Feature', () => {
 		await new Promise((resolve) => setTimeout(resolve, 100))
 		await mosConnection?.dispose()
 
-		primary?.dispose()
-		secondary?.dispose()
+		void primary?.dispose()
+		void secondary?.dispose()
 	})
 })

@@ -184,7 +184,7 @@ export class NCSServerConnection extends EventEmitter<NCSServerConnectionEvents>
 			if (clients?.length) {
 				clients[0].queueCommand(message, (response) => {
 					if ('error' in response) {
-						reject(response.error)
+						reject(response.error instanceof Error ? response.error : new Error(response.error))
 					} else {
 						resolve(response.reply)
 					}

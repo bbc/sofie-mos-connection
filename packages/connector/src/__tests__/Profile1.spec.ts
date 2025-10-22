@@ -60,7 +60,7 @@ describe('Profile 1', () => {
 	let onRequestMOSObject: jest.Mock<any, any>
 	let onRequestAllMOSObjects: jest.Mock<any, any>
 	let onMOSObjects: jest.Mock<any, any>
-	let receivedMosObjects: Array<IMOSObject> = []
+	const receivedMosObjects: Array<IMOSObject> = []
 
 	beforeAll(async () => {
 		mosConnection = await getMosConnection(

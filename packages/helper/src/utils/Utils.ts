@@ -204,6 +204,7 @@ export function addTextElementInternal(
 	} else if (content !== undefined) {
 		const stringified = stringifyMosType(content, mosTypes)
 		if (stringified.isMosType) txt = stringified.stringValue
+		// eslint-disable-next-line @typescript-eslint/no-base-to-string
 		else txt = content.toString()
 	} else {
 		txt = undefined

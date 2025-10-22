@@ -179,7 +179,7 @@ ${roStory0XML}`
 		)
 	})
 
-	describe('roElementAction ', () => {
+	describe('roElementAction', () => {
 		test('ROInsertStories', () => {
 			const msg = new ROInsertStories(
 				{

@@ -5,7 +5,10 @@ import { XMLROStory, XMLRunningOrderBase } from './xmlConversion.js'
 
 export class ROList extends MosMessage {
 	/** */
-	constructor(private ro: IMOSRunningOrder, strict: boolean) {
+	constructor(
+		private ro: IMOSRunningOrder,
+		strict: boolean
+	) {
 		super('upper', strict)
 	}
 

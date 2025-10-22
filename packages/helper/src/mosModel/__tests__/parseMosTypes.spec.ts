@@ -59,7 +59,9 @@ describe('parseMosTypes', () => {
 	test('stringEnum', () => {
 		const parseMosTypes = getParseMosTypes(true)
 
-		expect(parseMosTypes.stringEnum.createRequired({ value: 'STILL', enum: IMOSObjectType }, '')).toBe
+		expect(parseMosTypes.stringEnum.createRequired({ value: 'STILL', enum: IMOSObjectType }, '')).toBe(
+			'something123'
+		)
 
 		expect(() => {
 			parseMosTypes.stringEnum.createRequired({ value: 'wrongValue', enum: IMOSObjectType }, '')

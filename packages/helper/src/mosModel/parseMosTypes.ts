@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-base-to-string */
 import { MosTypes, getMosTypes, MosType, AnyXMLObject } from '@mos-connection/model'
 import { AnyXMLValue } from './lib.js'
 import { ParseError } from './ParseError.js'

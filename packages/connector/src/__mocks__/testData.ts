@@ -2257,5 +2257,4 @@ const xmlApiData = {
 	}),
 }
 
-// eslint-disable-next-line jest/no-export
 export { xmlData, xmlApiData }

@@ -7,7 +7,10 @@ import { addTextElementInternal } from '../../utils/Utils.js'
 
 export class ROStory extends MosMessage {
 	/** */
-	constructor(private fullStory: IMOSROFullStory, strict: boolean) {
+	constructor(
+		private fullStory: IMOSROFullStory,
+		strict: boolean
+	) {
 		super('upper', strict)
 	}
 

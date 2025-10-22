@@ -18,7 +18,7 @@ describe('Index', () => {
 				MOS.IMOSROAction,
 				MOS.IMOSROReadyToAir,
 				MOS.IMOSROFullStory,
-				MOS.IMOSAck
+				MOS.IMOSAck,
 			],
 			// @ts-expect-error types test
 			_falsePositiveTest: MOS.ThisDoesNotExist

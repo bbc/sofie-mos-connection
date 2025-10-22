@@ -444,8 +444,8 @@ export class MosSocketClient extends EventEmitter<MosSocketClientEvents> {
 				) {
 					this._sendReply(this._sentMessage.msg.messageID, { reply: parsedData })
 				} else {
-					this.debugTrace('Mos Error message:' + parsedData.mos.mosAck.statusDescription)
-					this.emit('error', new Error('Error message: ' + parsedData.mos.mosAck.statusDescription))
+					this.debugTrace(`Mos Error message: ${parsedData.mos.mosAck.statusDescription as string}`)
+					this.emit('error', new Error(`Error message: ${parsedData.mos.mosAck.statusDescription as string}`))
 				}
 			} else {
 				// unknown message..

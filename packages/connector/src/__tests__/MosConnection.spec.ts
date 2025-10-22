@@ -3,7 +3,7 @@ import { clearMocks, decode, delay, encode, getMessageId, getXMLReply, initMosCo
 import { SocketMock } from '../__mocks__/socket.js'
 import { ServerMock } from '../__mocks__/server.js'
 import { xmlData, xmlApiData } from '../__mocks__/testData.js'
-import { MosConnection, MosDevice, IMOSObject, IMOSConnectionStatus, ConnectionConfig } from '../.js'
+import { MosConnection, MosDevice, IMOSObject, IMOSConnectionStatus, ConnectionConfig } from '../index.js'
 
 // @ts-ignore imports are unused
 import { Socket } from 'net'
