@@ -24,30 +24,28 @@
     "lint:raw": "eslint",
     "lint": "run lint:raw .",
     "lint-fix": "run lint --fix",
-    "test": "lerna run test --stream",
-    "test:changed": "lerna run --since origin/main --include-dependents test",
-    "test:coverage": "lerna run test:coverage --stream",
+    "test": "vitest",
+    "test:coverage": "vitest --run --coverage",
     "validate:dependencies": "lerna exec --parallel yarn validate:dependencies && yarn license-validate",
     "validate:dev-dependencies": "lerna exec --parallel yarn validate:dev-dependencies",
     "license-validate": "sofie-licensecheck --allowPackages \"mos-examples@0.0.0;quick-mos@0.0.0;mos-dummy-server@0.0.0\""
   },
   "devDependencies": {
     "@sofie-automation/code-standard-preset": "3.2.0",
-    "@types/jest": "^30.0.0",
     "@types/node": "^22.18.12",
+    "@vitest/coverage-v8": "^4.0.0",
     "deep-extend": "^0.6.0",
     "eslint": "^9.38.0",
     "glob": "^7.2.3",
     "husky": "^9.1.7",
-    "jest": "^30.2.0",
     "lerna": "^9.0.0",
     "lint-staged": "^16.2.5",
     "lodash": "^4.17.21",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
-    "ts-jest": "^29.4.5",
     "tsx": "^4.20.6",
-    "typescript": "~5.7.3"
+    "typescript": "~5.7.3",
+    "vitest": "^4.0.0"
   },
   "engines": {
     "node": ">=14.18.0"

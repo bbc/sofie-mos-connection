@@ -1,8 +1,5 @@
 {
 	"extends": "./tsconfig.build.json",
 	"include": ["src/**/*.ts", "examples/**/*.ts"],
-	"exclude": ["node_modules/**", "scratch/**"],
-	"compilerOptions": {
-		"types": ["node", "jest"]
-	}
+	"exclude": ["node_modules/**", "scratch/**"]
 }

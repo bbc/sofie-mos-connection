@@ -3,7 +3,8 @@
 import { generateEslintConfig } from '@sofie-automation/code-standard-preset/eslint/main.mjs'
 
 const baseConfig = await generateEslintConfig({
-	ignores: ['packages/quick-mos/input/**'],
+	ignores: ['vitest.config.ts', 'packages/quick-mos/input/**'],
+	testRunner: 'vitest',
 })
 
 const customConfig = [

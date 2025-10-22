@@ -1,4 +1,5 @@
 import { ParseError } from '../mosModel/ParseError.js'
+import { describe, test, expect } from 'vitest'
 
 describe('ParseError', () => {
 	function throwsError() {

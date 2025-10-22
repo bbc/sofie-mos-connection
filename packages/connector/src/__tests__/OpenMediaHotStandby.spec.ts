@@ -1,8 +1,9 @@
-/* eslint-disable jest/no-conditional-expect */
+/* eslint-disable vitest/no-conditional-expect */
 import { MosConnection } from '../MosConnection.js'
 import { getMosConnection, setupMocks } from './lib.js'
 import { NCSServerConnection } from '../connection/NCSServerConnection.js'
 import { SocketMock } from '../__mocks__/socket.js'
+import { describe, test, expect, beforeAll, beforeEach, afterEach } from 'vitest'
 
 const PRIMARY_IP = '127.0.0.1'
 const SECONDARY_IP = '127.0.0.2'

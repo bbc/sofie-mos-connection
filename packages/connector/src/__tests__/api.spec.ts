@@ -32,6 +32,7 @@ import {
 	IMOSStoryStatus,
 	IMOSString128,
 } from '@mos-connection/model'
+import { test, expect } from 'vitest'
 
 test('api & exports', () => {
 	// Note: This test doesn't test anything during runtime, but it touches types instead.

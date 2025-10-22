@@ -23,6 +23,7 @@ import {
 	RODelete,
 } from '../profile2/index.js'
 import { literal } from '../lib.js'
+import { describe, test, expect } from 'vitest'
 
 describe('Profile 2', () => {
 	const mosTypes = getMosTypes(true)

@@ -1,4 +1,5 @@
 import { ConnectionConfig } from '../connectionConfig.js'
+import { describe, test, expect } from 'vitest'
 
 describe('ConnectionConfig', () => {
 	test('new ConnectionConfig', () => {

@@ -17,7 +17,6 @@
 	},
 	"contributors": [],
 	"scripts": {
-		"test": "run -T jest",
 		"inspect": "node --inspect dist/index.js",
 		"start": "tsx src/index.ts",
 		"validate:dependencies": "yarn npm audit --environment production && run license-validate",

@@ -10,10 +10,11 @@ import { xml2js } from 'xml-js'
 
 import * as iconv from 'iconv-lite'
 import { NCSServerConnection } from '../connection/NCSServerConnection.js'
+import { expect, vitest } from 'vitest'
 iconv.encodingExists('utf16-be')
 
 // breaks net.Server, disabled for now
-jest.mock('net')
+vitest.mock('net')
 
 export function setupMocks(): void {
 	// Mock tcp connection
