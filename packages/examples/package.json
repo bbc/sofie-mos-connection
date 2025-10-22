@@ -23,7 +23,7 @@
 		"node": ">=22.20.0"
 	},
 	"dependencies": {
-		"@mos-connection/connector": "4.3.2"
+		"@mos-connection/connector": "workspace:*"
 	},
 	"prettier": "@sofie-automation/code-standard-preset/.prettierrc.json",
 	"lint-staged": {
