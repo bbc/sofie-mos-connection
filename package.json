@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "lerna": "lerna",
     "postinstall": "node scripts/update-packages.mjs",
     "ci": "run build && run lint && run test",
@@ -20,33 +20,44 @@
     "reset": "node scripts/reset.js",
     "build": "lerna run build --stream",
     "build:changed": "lerna run build --since head --exclude-dependents --stream",
-    "lint": "lerna exec --parallel -- run -T eslint . --ext .ts,.tsx",
-    "lintfix": "run lint --fix",
-    "lint:changed": "lerna exec --since origin/main --include-dependents -- run -T eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:raw": "eslint",
+    "lint": "run lint:raw .",
+    "lint-fix": "run lint --fix",
     "test": "lerna run test --stream",
     "test:changed": "lerna run --since origin/main --include-dependents test",
     "test:coverage": "lerna run test:coverage --stream",
-    "lint-staged": "./node_modules/.bin/lint-staged",
-    "prettier": "cd $INIT_CWD && \"$PROJECT_CWD/node_modules/.bin/prettier\"",
-    "eslint": "cd $INIT_CWD && \"$PROJECT_CWD/node_modules/.bin/eslint\"",
-    "validate:dependencies": "yarn lerna exec --parallel yarn validate:dependencies && yarn license-validate",
-    "validate:dev-dependencies": "yarn lerna exec --parallel yarn validate:dev-dependencies",
-    "license-validate": "yarn sofie-licensecheck --allowPackages \"mos-examples@0.0.0;quick-mos@0.0.0;mos-dummy-server@0.0.0\""
+    "validate:dependencies": "lerna exec --parallel yarn validate:dependencies && yarn license-validate",
+    "validate:dev-dependencies": "lerna exec --parallel yarn validate:dev-dependencies",
+    "license-validate": "sofie-licensecheck --allowPackages \"mos-examples@0.0.0;quick-mos@0.0.0;mos-dummy-server@0.0.0\""
   },
   "devDependencies": {
-    "@sofie-automation/code-standard-preset": "2.5.2",
+    "@sofie-automation/code-standard-preset": "3.2.0",
     "@types/jest": "^30.0.0",
+    "@types/node": "^22.18.12",
     "deep-extend": "^0.6.0",
+    "eslint": "^9.38.0",
     "glob": "^7.2.3",
+    "husky": "^9.1.7",
     "jest": "^30.2.0",
     "lerna": "^9.0.0",
+    "lint-staged": "^16.2.5",
     "lodash": "^4.17.21",
+    "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
     "ts-jest": "^29.4.5",
-    "typescript": "~4.9.5"
+    "tsx": "^4.20.6",
+    "typescript": "~5.7.3"
   },
   "engines": {
     "node": ">=14.18.0"
+  },
+  "lint-staged": {
+    "*.{css,json,md,scss}": [
+      "prettier"
+    ],
+    "*.{ts,tsx,js,jsx}": [
+      "eslint"
+    ]
   },
   "prettier": "@sofie-automation/code-standard-preset/.prettierrc.json",
   "packageManager": "yarn@4.10.3"
