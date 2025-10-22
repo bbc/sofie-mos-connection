@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Profile 2 deprecated messages roItemDelete 1`] = `
 [
@@ -29,15 +29,7 @@ exports[`Profile 2 deprecated messages roItemDelete 1`] = `
 ]
 `;
 
-exports[`Profile 2 deprecated messages roItemDelete: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1670</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roItemDelete: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1670</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -111,15 +103,7 @@ exports[`Profile 2 deprecated messages roItemInsert 1`] = `
 ]
 `;
 
-exports[`Profile 2 deprecated messages roItemInsert: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1667</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roItemInsert: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1667</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -163,15 +147,7 @@ exports[`Profile 2 deprecated messages roItemMoveMultiple 1`] = `
 ]
 `;
 
-exports[`Profile 2 deprecated messages roItemMoveMultiple: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1669</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roItemMoveMultiple: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1669</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -245,15 +221,7 @@ exports[`Profile 2 deprecated messages roItemReplace 1`] = `
 ]
 `;
 
-exports[`Profile 2 deprecated messages roItemReplace: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1668</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roItemReplace: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1668</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -378,15 +346,7 @@ exports[`Profile 2 deprecated messages roStoryAppend 1`] = `
 ]
 `;
 
-exports[`Profile 2 deprecated messages roStoryAppend: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1657</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roStoryAppend: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1657</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -418,15 +378,7 @@ exports[`Profile 2 deprecated messages roStoryDelete 1`] = `
 ]
 `;
 
-exports[`Profile 2 deprecated messages roStoryDelete: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1664</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roStoryDelete: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1664</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -551,15 +503,7 @@ exports[`Profile 2 deprecated messages roStoryInsert 1`] = `
 ]
 `;
 
-exports[`Profile 2 deprecated messages roStoryInsert: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1658</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roStoryInsert: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1658</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -571,15 +515,7 @@ exports[`Profile 2 deprecated messages roStoryInsert: <mos>
 </mos>"
 `;
 
-exports[`Profile 2 deprecated messages roStoryMove - missing second <storyID>: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1662</messageID>
-  <roAck>
-    <roID>5PM</roID>
-    <roStatus>The second &lt;storyID&gt; tag is missing in &lt;roStoryMove&gt;.</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roStoryMove - missing second <storyID>: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1662</messageID>\\n  <roAck>\\n    <roID>5PM</roID>\\n    <roStatus>The second &lt;storyID&gt; tag is missing in &lt;roStoryMove&gt;.</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -631,15 +567,7 @@ exports[`Profile 2 deprecated messages roStoryMove with blank 1`] = `
 ]
 `;
 
-exports[`Profile 2 deprecated messages roStoryMove with blank: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1661</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roStoryMove with blank: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1661</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -651,15 +579,7 @@ exports[`Profile 2 deprecated messages roStoryMove with blank: <mos>
 </mos>"
 `;
 
-exports[`Profile 2 deprecated messages roStoryMove: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1660</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roStoryMove: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1660</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -716,15 +636,7 @@ exports[`Profile 2 deprecated messages roStoryMoveMultiple with single storyId 1
 ]
 `;
 
-exports[`Profile 2 deprecated messages roStoryMoveMultiple with single storyId: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1666</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roStoryMoveMultiple with single storyId: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1666</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -736,15 +648,7 @@ exports[`Profile 2 deprecated messages roStoryMoveMultiple with single storyId: 
 </mos>"
 `;
 
-exports[`Profile 2 deprecated messages roStoryMoveMultiple: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1665</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roStoryMoveMultiple: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1665</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -879,15 +783,7 @@ exports[`Profile 2 deprecated messages roStoryReplace 1`] = `
 ]
 `;
 
-exports[`Profile 2 deprecated messages roStoryReplace: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1659</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roStoryReplace: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1659</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -917,15 +813,7 @@ exports[`Profile 2 deprecated messages roStorySwap 1`] = `
 ]
 `;
 
-exports[`Profile 2 deprecated messages roStorySwap: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1663</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 deprecated messages roStorySwap: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1663</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1089,15 +977,7 @@ exports[`Profile 2 onCreateRunningOrder with simple story 1`] = `
 ]
 `;
 
-exports[`Profile 2 onCreateRunningOrder with simple story: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1634</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onCreateRunningOrder with simple story: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1634</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1109,15 +989,7 @@ exports[`Profile 2 onCreateRunningOrder with simple story: <mos>
 </mos>"
 `;
 
-exports[`Profile 2 onCreateRunningOrder: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1633</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onCreateRunningOrder: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1633</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1139,15 +1011,7 @@ exports[`Profile 2 onDeleteRunningOrder 1`] = `
 ]
 `;
 
-exports[`Profile 2 onDeleteRunningOrder: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1636</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onDeleteRunningOrder: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1636</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1189,15 +1053,7 @@ exports[`Profile 2 onItemStatus 1`] = `
 ]
 `;
 
-exports[`Profile 2 onItemStatus: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1642</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onItemStatus: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1642</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1245,15 +1101,7 @@ exports[`Profile 2 onMetadataReplace 1`] = `
 ]
 `;
 
-exports[`Profile 2 onMetadataReplace: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1639</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onMetadataReplace: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1639</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1288,15 +1136,7 @@ exports[`Profile 2 onRODeleteItems 1`] = `
 ]
 `;
 
-exports[`Profile 2 onRODeleteItems: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1654</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onRODeleteItems: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1654</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1325,15 +1165,7 @@ exports[`Profile 2 onRODeleteStories 1`] = `
 ]
 `;
 
-exports[`Profile 2 onRODeleteStories: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1653</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onRODeleteStories: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1653</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1397,15 +1229,7 @@ exports[`Profile 2 onROInsertItems 1`] = `
 ]
 `;
 
-exports[`Profile 2 onROInsertItems: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1646</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onROInsertItems: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1646</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1440,15 +1264,7 @@ exports[`Profile 2 onROInsertStories - simple story 1`] = `
 ]
 `;
 
-exports[`Profile 2 onROInsertStories - simple story: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1645</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onROInsertStories - simple story: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1645</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1530,15 +1346,7 @@ exports[`Profile 2 onROInsertStories 1`] = `
 ]
 `;
 
-exports[`Profile 2 onROInsertStories: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1644</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onROInsertStories: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1644</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1576,15 +1384,7 @@ exports[`Profile 2 onROMoveItems 1`] = `
 ]
 `;
 
-exports[`Profile 2 onROMoveItems: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1652</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onROMoveItems: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1652</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1619,15 +1419,7 @@ exports[`Profile 2 onROMoveStories 1`] = `
 ]
 `;
 
-exports[`Profile 2 onROMoveStories: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1651</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onROMoveStories: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1651</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1659,15 +1451,7 @@ exports[`Profile 2 onROMoveStory 1`] = `
 ]
 `;
 
-exports[`Profile 2 onROMoveStory: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1650</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onROMoveStory: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1650</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1731,15 +1515,7 @@ exports[`Profile 2 onROReplaceItems 1`] = `
 ]
 `;
 
-exports[`Profile 2 onROReplaceItems: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1649</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onROReplaceItems: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1649</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1774,15 +1550,7 @@ exports[`Profile 2 onROReplaceStories - simple story 1`] = `
 ]
 `;
 
-exports[`Profile 2 onROReplaceStories - simple story: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1648</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onROReplaceStories - simple story: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1648</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1864,15 +1632,7 @@ exports[`Profile 2 onROReplaceStories 1`] = `
 ]
 `;
 
-exports[`Profile 2 onROReplaceStories: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1647</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onROReplaceStories: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1647</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1905,15 +1665,7 @@ exports[`Profile 2 onROSwapItems 1`] = `
 ]
 `;
 
-exports[`Profile 2 onROSwapItems: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1656</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onROSwapItems: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1656</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1943,15 +1695,7 @@ exports[`Profile 2 onROSwapStories 1`] = `
 ]
 `;
 
-exports[`Profile 2 onROSwapStories: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1655</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onROSwapStories: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1655</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1976,15 +1720,7 @@ exports[`Profile 2 onReadyToAir 1`] = `
 ]
 `;
 
-exports[`Profile 2 onReadyToAir: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1643</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onReadyToAir: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1643</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -2109,15 +1845,7 @@ exports[`Profile 2 onReplaceRunningOrder 1`] = `
 ]
 `;
 
-exports[`Profile 2 onReplaceRunningOrder: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1635</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onReplaceRunningOrder: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1635</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -2306,15 +2034,7 @@ exports[`Profile 2 onRequestRunningOrder 2`] = `
 }
 `;
 
-exports[`Profile 2 onRequestRunningOrder not found: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1638</messageID>
-  <roAck>
-    <roID>96857485</roID>
-    <roStatus>NACK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onRequestRunningOrder not found: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1638</messageID>\\n  <roAck>\\n    <roID>96857485</roID>\\n    <roStatus>NACK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -2326,71 +2046,7 @@ exports[`Profile 2 onRequestRunningOrder not found: <mos>
 </mos>"
 `;
 
-exports[`Profile 2 onRequestRunningOrder: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1637</messageID>
-  <roList>
-    <roID>96857485</roID>
-    <roSlug>5PM RUNDOWN</roSlug>
-    <roEdStart>2009-04-17T17:02:00,000Z</roEdStart>
-    <roEdDur>0:58:25</roEdDur>
-    <story>
-      <storyID>5983A501:0049B924:8390EF2B</storyID>
-      <storySlug>COLSTAT MURDER</storySlug>
-      <storyNum>A5</storyNum>
-      <item>
-        <itemID>0</itemID>
-        <objID>M000224</objID>
-        <mosID>testmos.enps.com</mosID>
-        <itemSlug>COLSTAT MURDER:VO</itemSlug>
-        <objPaths>
-          <objPath techDescription="MPEG2 Video">\\server\\media\\clip392028cd2320s0d.mxf</objPath>
-          <objProxyPath techDescription="WM9 750Kbps">https://server/proxy/clipe.wmv</objProxyPath>
-          <objMetadataPath techDescription="MOS Object">https://server/proxy/clipe.xml</objMetadataPath>
-        </objPaths>
-        <itemEdDur>645</itemEdDur>
-        <itemUserTimingDur>310</itemUserTimingDur>
-        <itemTrigger>CHAINED</itemTrigger>
-        <mosExternalMetadata>
-          <mosScope>PLAYLIST</mosScope>
-          <mosSchema>https://MOSA4.com/mos/supported_schemas/MOSAXML2.08</mosSchema>
-          <mosPayload>
-            <Owner>SHOLMES</Owner>
-            <transitionMode>2</transitionMode>
-            <transitionPoint>463</transitionPoint>
-            <source>a</source>
-            <destination>b</destination>
-          </mosPayload>
-        </mosExternalMetadata>
-      </item>
-    </story>
-    <story>
-      <storyID>3854737F:0003A34D:983A0B28</storyID>
-      <storySlug>AIRLINE INSPECTIONS</storySlug>
-      <storyNum>A6</storyNum>
-      <item>
-        <itemID>0</itemID>
-        <objID>M000133</objID>
-        <mosID>testmos.enps.com</mosID>
-        <itemEdStart>55</itemEdStart>
-        <itemEdDur>310</itemEdDur>
-        <itemUserTimingDur>200</itemUserTimingDur>
-        <mosExternalMetadata>
-          <mosScope>PLAYLIST</mosScope>
-          <mosSchema>https://MOSA4.com/mos/supported_schemas/MOSAXML2.08</mosSchema>
-          <mosPayload>
-            <Owner>SHOLMES</Owner>
-            <transitionMode>2</transitionMode>
-            <transitionPoint>463</transitionPoint>
-            <source>a</source>
-            <destination>b</destination>
-          </mosPayload>
-        </mosExternalMetadata>
-      </item>
-    </story>
-  </roList>
-</mos> 1`] = `
+exports[`Profile 2 onRequestRunningOrder: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1637</messageID>\\n  <roList>\\n    <roID>96857485</roID>\\n    <roSlug>5PM RUNDOWN</roSlug>\\n    <roEdStart>2009-04-17T17:02:00,000Z</roEdStart>\\n    <roEdDur>0:58:25</roEdDur>\\n    <story>\\n      <storyID>5983A501:0049B924:8390EF2B</storyID>\\n      <storySlug>COLSTAT MURDER</storySlug>\\n      <storyNum>A5</storyNum>\\n      <item>\\n        <itemID>0</itemID>\\n        <objID>M000224</objID>\\n        <mosID>testmos.enps.com</mosID>\\n        <itemSlug>COLSTAT MURDER:VO</itemSlug>\\n        <objPaths>\\n          <objPath techDescription="MPEG2 Video">\\server\\media\\clip392028cd2320s0d.mxf</objPath>\\n          <objProxyPath techDescription="WM9 750Kbps">https://server/proxy/clipe.wmv</objProxyPath>\\n          <objMetadataPath techDescription="MOS Object">https://server/proxy/clipe.xml</objMetadataPath>\\n        </objPaths>\\n        <itemEdDur>645</itemEdDur>\\n        <itemUserTimingDur>310</itemUserTimingDur>\\n        <itemTrigger>CHAINED</itemTrigger>\\n        <mosExternalMetadata>\\n          <mosScope>PLAYLIST</mosScope>\\n          <mosSchema>https://MOSA4.com/mos/supported_schemas/MOSAXML2.08</mosSchema>\\n          <mosPayload>\\n            <Owner>SHOLMES</Owner>\\n            <transitionMode>2</transitionMode>\\n            <transitionPoint>463</transitionPoint>\\n            <source>a</source>\\n            <destination>b</destination>\\n          </mosPayload>\\n        </mosExternalMetadata>\\n      </item>\\n    </story>\\n    <story>\\n      <storyID>3854737F:0003A34D:983A0B28</storyID>\\n      <storySlug>AIRLINE INSPECTIONS</storySlug>\\n      <storyNum>A6</storyNum>\\n      <item>\\n        <itemID>0</itemID>\\n        <objID>M000133</objID>\\n        <mosID>testmos.enps.com</mosID>\\n        <itemEdStart>55</itemEdStart>\\n        <itemEdDur>310</itemEdDur>\\n        <itemUserTimingDur>200</itemUserTimingDur>\\n        <mosExternalMetadata>\\n          <mosScope>PLAYLIST</mosScope>\\n          <mosSchema>https://MOSA4.com/mos/supported_schemas/MOSAXML2.08</mosSchema>\\n          <mosPayload>\\n            <Owner>SHOLMES</Owner>\\n            <transitionMode>2</transitionMode>\\n            <transitionPoint>463</transitionPoint>\\n            <source>a</source>\\n            <destination>b</destination>\\n          </mosPayload>\\n        </mosExternalMetadata>\\n      </item>\\n    </story>\\n  </roList>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -2476,15 +2132,7 @@ exports[`Profile 2 onRunningOrderStatus 1`] = `
 ]
 `;
 
-exports[`Profile 2 onRunningOrderStatus: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1640</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onRunningOrderStatus: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1640</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -2517,15 +2165,7 @@ exports[`Profile 2 onStoryStatus 1`] = `
 ]
 `;
 
-exports[`Profile 2 onStoryStatus: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1641</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 onStoryStatus: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1641</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Profile 3 mosItemReplace 1`] = `
 "<mos>
@@ -630,15 +630,7 @@ exports[`Profile 3 onMosItemReplace 1`] = `
 ]
 `;
 
-exports[`Profile 3 onMosItemReplace: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1634</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 3 onMosItemReplace: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1634</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -740,17 +732,7 @@ Clip has been doubled for pad on voice over.",
 ]
 `;
 
-exports[`Profile 3 onMosObjCreate: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1633</messageID>
-  <mosAck>
-    <objID>runningOrderId</objID>
-    <objRev>1</objRev>
-    <status>ACK</status>
-    <statusDescription/>
-  </mosAck>
-</mos> 1`] = `
+exports[`Profile 3 onMosObjCreate: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1633</messageID>\\n  <mosAck>\\n    <objID>runningOrderId</objID>\\n    <objRev>1</objRev>\\n    <status>ACK</status>\\n    <statusDescription/>\\n  </mosAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -774,17 +756,7 @@ exports[`Profile 3 onMosReqObjectActionDelete 1`] = `
 ]
 `;
 
-exports[`Profile 3 onMosReqObjectActionDelete: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1639</messageID>
-  <mosAck>
-    <objID>runningOrderId</objID>
-    <objRev>1</objRev>
-    <status>ACK</status>
-    <statusDescription/>
-  </mosAck>
-</mos> 1`] = `
+exports[`Profile 3 onMosReqObjectActionDelete: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1639</messageID>\\n  <mosAck>\\n    <objID>runningOrderId</objID>\\n    <objRev>1</objRev>\\n    <status>ACK</status>\\n    <statusDescription/>\\n  </mosAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -888,17 +860,7 @@ Clip has been doubled for pad on voice over.",
 ]
 `;
 
-exports[`Profile 3 onMosReqObjectActionNew: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1637</messageID>
-  <mosAck>
-    <objID>runningOrderId</objID>
-    <objRev>1</objRev>
-    <status>ACK</status>
-    <statusDescription/>
-  </mosAck>
-</mos> 1`] = `
+exports[`Profile 3 onMosReqObjectActionNew: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1637</messageID>\\n  <mosAck>\\n    <objID>runningOrderId</objID>\\n    <objRev>1</objRev>\\n    <status>ACK</status>\\n    <statusDescription/>\\n  </mosAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1008,17 +970,7 @@ Clip has been doubled for pad on voice over.",
 ]
 `;
 
-exports[`Profile 3 onMosReqObjectActionUpdate: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1638</messageID>
-  <mosAck>
-    <objID>runningOrderId</objID>
-    <objRev>1</objRev>
-    <status>ACK</status>
-    <statusDescription/>
-  </mosAck>
-</mos> 1`] = `
+exports[`Profile 3 onMosReqObjectActionUpdate: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1638</messageID>\\n  <mosAck>\\n    <objID>runningOrderId</objID>\\n    <objRev>1</objRev>\\n    <status>ACK</status>\\n    <statusDescription/>\\n  </mosAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1093,17 +1045,7 @@ exports[`Profile 3 onMosReqObjectList 1`] = `
 ]
 `;
 
-exports[`Profile 3 onMosReqObjectList: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1636</messageID>
-  <mosObjList username="jbob">
-    <queryID>A392938329kdakd2039300d0s9l3l9d0bzAQ</queryID>
-    <listReturnStart>0</listReturnStart>
-    <listReturnEnd>0</listReturnEnd>
-    <listReturnTotal>0</listReturnTotal>
-  </mosObjList>
-</mos> 1`] = `
+exports[`Profile 3 onMosReqObjectList: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1636</messageID>\\n  <mosObjList username="jbob">\\n    <queryID>A392938329kdakd2039300d0s9l3l9d0bzAQ</queryID>\\n    <listReturnStart>0</listReturnStart>\\n    <listReturnEnd>0</listReturnEnd>\\n    <listReturnTotal>0</listReturnTotal>\\n  </mosObjList>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -1125,14 +1067,7 @@ exports[`Profile 3 onMosReqSearchableSchema 1`] = `
 ]
 `;
 
-exports[`Profile 3 onMosReqSearchableSchema: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1635</messageID>
-  <mosListSearchableSchema username="jbob">
-    <mosSchema>https://example.com/mosSearchableSchema</mosSchema>
-  </mosListSearchableSchema>
-</mos> 1`] = `
+exports[`Profile 3 onMosReqSearchableSchema: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1635</messageID>\\n  <mosListSearchableSchema username="jbob">\\n    <mosSchema>https://example.com/mosSearchableSchema</mosSchema>\\n  </mosListSearchableSchema>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>

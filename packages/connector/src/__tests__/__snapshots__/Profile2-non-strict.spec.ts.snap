@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Profile 2 - non strict deprecated messages roStoryMove - missing second <storyID> 1`] = `
 [
@@ -20,15 +20,7 @@ exports[`Profile 2 - non strict deprecated messages roStoryMove - missing second
 ]
 `;
 
-exports[`Profile 2 - non strict deprecated messages roStoryMove - missing second <storyID>: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1633</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 - non strict deprecated messages roStoryMove - missing second <storyID>: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1633</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -60,15 +52,7 @@ exports[`Profile 2 - non strict deprecated messages roStoryMoveMultiple with sin
 ]
 `;
 
-exports[`Profile 2 - non strict deprecated messages roStoryMoveMultiple with single storyId: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1634</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 2 - non strict deprecated messages roStoryMoveMultiple with single storyId: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1634</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>

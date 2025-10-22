@@ -27,12 +27,12 @@ describe('ConnectionConfig', () => {
 		expect(() => {
 			// @ts-ignore
 			return new ConnectionConfig(undefined)
-		}).toThrowError(/object.*missing/)
+		}).toThrow(/object.*missing/)
 
 		expect(() => {
 			// @ts-ignore
 			return new ConnectionConfig(1)
-		}).toThrowError(/not an object/)
+		}).toThrow(/not an object/)
 
 		expect(() => {
 			// @ts-ignore
@@ -40,7 +40,7 @@ describe('ConnectionConfig', () => {
 				mosID: 'test',
 				acceptsConnections: true,
 			})
-		}).toThrowError(/profiles.*missing/)
+		}).toThrow(/profiles.*missing/)
 
 		expect(() => {
 			// @ts-ignore
@@ -51,7 +51,7 @@ describe('ConnectionConfig', () => {
 					'1': true,
 				},
 			})
-		}).toThrowError(/acceptsConnections.*missing/)
+		}).toThrow(/acceptsConnections.*missing/)
 
 		expect(() => {
 			// @ts-ignore
@@ -62,7 +62,7 @@ describe('ConnectionConfig', () => {
 					'1': true,
 				},
 			})
-		}).toThrowError(/mosID.*missing/)
+		}).toThrow(/mosID.*missing/)
 
 		expect(() => {
 			return new ConnectionConfig({
@@ -73,7 +73,7 @@ describe('ConnectionConfig', () => {
 					'1': true,
 				},
 			})
-		}).toThrowError(/profile.*0.*mandatory/i)
+		}).toThrow(/profile.*0.*mandatory/i)
 
 		expect(() => {
 			return new ConnectionConfig({
@@ -83,6 +83,6 @@ describe('ConnectionConfig', () => {
 					'0': true,
 				},
 			})
-		}).toThrowError(/must support at least one profile/i)
+		}).toThrow(/must support at least one profile/i)
 	})
 })

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Profile 4 getAllRunningOrders 1`] = `
 "<mos>
@@ -690,15 +690,7 @@ exports[`Profile 4 onRunningOrderStory, string MosPayload 1`] = `
 ]
 `;
 
-exports[`Profile 4 onRunningOrderStory, string MosPayload: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1635</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 4 onRunningOrderStory, string MosPayload: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1635</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -710,15 +702,7 @@ exports[`Profile 4 onRunningOrderStory, string MosPayload: <mos>
 </mos>"
 `;
 
-exports[`Profile 4 onRunningOrderStory: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1633</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 4 onRunningOrderStory: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1633</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>
@@ -764,15 +748,7 @@ exports[`Profile 4 onRunningOrderStory-single 1`] = `
 ]
 `;
 
-exports[`Profile 4 onRunningOrderStory-single: <mos>
-  <ncsID>their.mos.id</ncsID>
-  <mosID>our.mos.id</mosID>
-  <messageID>1634</messageID>
-  <roAck>
-    <roID>runningOrderId</roID>
-    <roStatus>OK</roStatus>
-  </roAck>
-</mos> 1`] = `
+exports[`Profile 4 onRunningOrderStory-single: <mos>\\n  <ncsID>their.mos.id</ncsID>\\n  <mosID>our.mos.id</mosID>\\n  <messageID>1634</messageID>\\n  <roAck>\\n    <roID>runningOrderId</roID>\\n    <roStatus>OK</roStatus>\\n  </roAck>\\n</mos> 1`] = `
 "<mos>
   <ncsID>their.mos.id</ncsID>
   <mosID>our.mos.id</mosID>

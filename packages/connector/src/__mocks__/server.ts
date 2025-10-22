@@ -60,8 +60,9 @@ export class ServerMock extends EventEmitter implements Server {
 	address(): { port: number; family: string; address: string } {
 		return { port: 0, family: 'string', address: 'string' }
 	}
-	getConnections(cb: (error: Error | null, count: number) => void): void {
+	getConnections(cb: (error: Error | null, count: number) => void): this {
 		cb(null, 0)
+		return this
 	}
 	ref(): this {
 		return this

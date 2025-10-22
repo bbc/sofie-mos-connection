@@ -7,7 +7,7 @@ describe('MosString128', () => {
 		const mosString = mosTypes.mosString128.create('test test')
 		expect(mosTypes.mosString128.stringify(mosString)).toBe('test test')
 		expect(mosTypes.mosString128.valueOf(mosString)).toBe('test test')
-		expect(() => mosTypes.mosString128.validate(mosString)).not.toThrowError()
+		expect(() => mosTypes.mosString128.validate(mosString)).not.toThrow()
 
 		// @ts-expect-error wrong input, but still:
 		expect(mosTypes.mosString128.valueOf('test test')).toBe('test test')
@@ -37,10 +37,10 @@ describe('MosString128', () => {
 		}
 		expect(() => {
 			notStrict.mosString128.create(tooLongStr)
-		}).not.toThrowError()
+		}).not.toThrow()
 		expect(() => {
 			strict.mosString128.create(tooLongStr)
-		}).toThrowError(/too long/)
+		}).toThrow(/too long/)
 	})
 	test('Various values', () => {
 		const mosTypes = getMosTypes(true)
