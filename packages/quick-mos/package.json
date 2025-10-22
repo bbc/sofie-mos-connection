@@ -29,7 +29,7 @@
 		"license-validate": "yarn sofie-licensecheck"
 	},
 	"engines": {
-		"node": ">=14.18.0"
+		"node": ">=22.20.0"
 	},
 	"devDependencies": {
 		"@sofie-automation/code-standard-preset": "*",
