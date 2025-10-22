@@ -1,5 +1,5 @@
 import { AnyXMLValue, AnyXMLValueSingular, IMOSObjectType } from '@mos-connection/model'
-import { getParseMosTypes } from '../parseMosTypes'
+import { getParseMosTypes } from '../parseMosTypes.js'
 
 describe('parseMosTypes', () => {
 	test('createRequired types', () => {

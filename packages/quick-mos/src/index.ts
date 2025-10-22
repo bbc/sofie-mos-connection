@@ -16,9 +16,9 @@ import {
 	IMOSObjectAirStatus,
 	getMosTypes,
 } from '@mos-connection/connector'
-import { diffLists, ListEntry, OperationType } from './mosDiff'
+import { diffLists, ListEntry, OperationType } from './mosDiff.js'
 import * as crypto from 'crypto'
-import { convertFromSofieSnapshot } from './convertFromSofieSnapshot'
+import { convertFromSofieSnapshot } from './convertFromSofieSnapshot.js'
 
 console.log('Starting Quick-MOS')
 

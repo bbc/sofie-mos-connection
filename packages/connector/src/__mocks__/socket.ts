@@ -3,7 +3,7 @@ import { EventEmitter } from 'events'
 import { Socket } from 'net'
 
 import * as iconv from 'iconv-lite'
-import { getMessageId } from '../__tests__/lib'
+import { getMessageId } from '../__tests__/lib.js'
 import { getMosTypes } from '@mos-connection/model'
 iconv.encodingExists('utf16-be')
 

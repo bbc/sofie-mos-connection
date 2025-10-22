@@ -1,4 +1,4 @@
-import { getMosTypes } from '../../mosTypes'
+import { getMosTypes } from '../../mosTypes.js'
 
 describe('MosTime', () => {
 	test('basic', () => {

@@ -1,7 +1,7 @@
-import { MosConnection } from '../MosConnection'
-import { getMosConnection, setupMocks } from './lib'
-import { NCSServerConnection } from '../connection/NCSServerConnection'
-import { SocketMock } from '../__mocks__/socket'
+import { MosConnection } from '../MosConnection.js'
+import { getMosConnection, setupMocks } from './lib.js'
+import { NCSServerConnection } from '../connection/NCSServerConnection.js'
+import { SocketMock } from '../__mocks__/socket.js'
 
 const PRIMARY_IP = '127.0.0.1'
 const SECONDARY_IP = '127.0.0.2'

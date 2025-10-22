@@ -9,10 +9,10 @@ import {
 	getMosDevice,
 	getXMLReply,
 	setupMocks,
-} from './lib'
-import { MosConnection, MosDevice, IMOSObject, IMOSListMachInfo } from '..'
-import { SocketMock } from '../__mocks__/socket'
-import { xmlData, xmlApiData } from '../__mocks__/testData'
+} from './lib.js'
+import { MosConnection, MosDevice, IMOSObject, IMOSListMachInfo } from '../index.js'
+import { SocketMock } from '../__mocks__/socket.js'
+import { xmlData, xmlApiData } from '../__mocks__/testData.js'
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // @ts-ignore imports are unused

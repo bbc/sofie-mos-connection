@@ -1,4 +1,4 @@
-import * as MOS from '../index'
+import * as MOS from '../index.js'
 
 describe('Index', () => {
 	test('ensure that types and enums are exposed', () => {

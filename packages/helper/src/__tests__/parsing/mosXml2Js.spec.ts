@@ -1,9 +1,9 @@
 import { readFileSync } from 'fs'
 import { join } from 'path'
 import * as XMLBuilder from 'xmlbuilder'
-import { xml2js } from '../../utils/Utils'
-import { IMOSItem, MosModel, stringifyMosObject } from '../..'
-import { ensureArray, ensureXMLObject, isXMLObject } from '../../mosModel'
+import { xml2js } from '../../utils/Utils.js'
+import { IMOSItem, MosModel, stringifyMosObject } from '../../index.js'
+import { ensureArray, ensureXMLObject, isXMLObject } from '../../mosModel/index.js'
 
 function parseMosPluginMessageXml(xmlString: string) {
 	const doc = xml2js(xmlString)

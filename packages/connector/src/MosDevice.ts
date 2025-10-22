@@ -1,5 +1,5 @@
 import { Socket } from 'net'
-import { NCSServerConnection } from './connection/NCSServerConnection'
+import { NCSServerConnection } from './connection/NCSServerConnection.js'
 import { EventEmitter } from 'eventemitter3'
 import {
 	IMOSObject,
@@ -35,9 +35,9 @@ import {
 	IMOSObjectAirStatus,
 } from '@mos-connection/model'
 import { MosModel, MosReplyError } from '@mos-connection/helper'
-import { IConnectionConfig, IMOSConnectionStatus, IMOSDevice } from './api'
-import { PROFILE_VALIDNESS_CHECK_WAIT_TIME, has, safeStringify } from './lib'
-import { ParsedMosMessage } from './connection/mosMessageParser'
+import { IConnectionConfig, IMOSConnectionStatus, IMOSDevice } from './api.js'
+import { PROFILE_VALIDNESS_CHECK_WAIT_TIME, has, safeStringify } from './lib.js'
+import { ParsedMosMessage } from './connection/mosMessageParser.js'
 import { XMLMosListSearchableSchema, XMLMosObjectList, isXMLObject } from '@mos-connection/helper/dist/mosModel'
 
 const { ensureXMLObject, ensureArray, ensureSingular, ensureSingularArray } = MosModel

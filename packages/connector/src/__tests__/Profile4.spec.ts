@@ -14,11 +14,11 @@ import {
 	getXMLReply,
 	mosTypes,
 	setupMocks,
-} from './lib'
-import { MosConnection, MosDevice, IMOSROAck, IMOSROFullStory, IMOSRunningOrder } from '..'
-import { SocketMock } from '../__mocks__/socket'
-import { ServerMock } from '../__mocks__/server'
-import { xmlData, xmlApiData } from '../__mocks__/testData'
+} from './lib.js'
+import { MosConnection, MosDevice, IMOSROAck, IMOSROFullStory, IMOSRunningOrder } from '../index.js'
+import { SocketMock } from '../__mocks__/socket.js'
+import { ServerMock } from '../__mocks__/server.js'
+import { xmlData, xmlApiData } from '../__mocks__/testData.js'
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // @ts-ignore imports are unused

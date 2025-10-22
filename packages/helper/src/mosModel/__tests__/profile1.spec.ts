@@ -10,9 +10,9 @@ import {
 	IMOSObjectType,
 	IMOSScope,
 } from '@mos-connection/model'
-import { getXMLString } from './lib'
-import { MOSAck, MosListAll, MosObj, ReqMosObj, ReqMosObjAll } from '../profile1'
-import { literal } from '../lib'
+import { getXMLString } from './lib.js'
+import { MOSAck, MosListAll, MosObj, ReqMosObj, ReqMosObjAll } from '../profile1/index.js'
+import { literal } from '../lib.js'
 
 describe('Profile 1', () => {
 	const mosTypes = getMosTypes(true)

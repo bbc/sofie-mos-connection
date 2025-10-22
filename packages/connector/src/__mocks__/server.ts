@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/unbound-method */
 import { EventEmitter } from 'events'
 import { Server } from 'net'
-import { SocketMock } from './socket'
+import { SocketMock } from './socket.js'
 
 import * as iconv from 'iconv-lite'
 iconv.encodingExists('utf16-be')

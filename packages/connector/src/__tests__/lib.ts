@@ -1,15 +1,15 @@
 /* eslint-disable @typescript-eslint/unbound-method */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { IMOSAck, MosConnection, MosDevice, IMOSROAck, IProfiles, getMosTypes } from '../'
+import { IMOSAck, MosConnection, MosDevice, IMOSROAck, IProfiles, getMosTypes } from '../.js'
 
-import { SocketMock } from '../__mocks__/socket'
-import { IServerMock, ServerMock } from '../__mocks__/server'
+import { SocketMock } from '../__mocks__/socket.js'
+import { IServerMock, ServerMock } from '../__mocks__/server.js'
 // @ts-ignore imports are unused
 import { Socket, Server } from 'net'
 import { xml2js } from 'xml-js'
 
 import * as iconv from 'iconv-lite'
-import { NCSServerConnection } from '../connection/NCSServerConnection'
+import { NCSServerConnection } from '../connection/NCSServerConnection.js'
 iconv.encodingExists('utf16-be')
 
 // breaks net.Server, disabled for now

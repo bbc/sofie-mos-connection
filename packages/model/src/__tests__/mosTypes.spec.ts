@@ -1,4 +1,4 @@
-import { getMosTypes, stringifyMosType } from '../mosTypes'
+import { getMosTypes, stringifyMosType } from '../mosTypes.js'
 
 describe('mosTypes', () => {
 	test('getMosTypes', () => {

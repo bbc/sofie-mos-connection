@@ -1,6 +1,6 @@
 import { Server, Socket } from 'net'
 import { EventEmitter } from 'eventemitter3'
-import { IncomingConnectionType, SocketServerEvent } from './socketConnection'
+import { IncomingConnectionType, SocketServerEvent } from './socketConnection.js'
 
 export interface MosSocketServerEvents {
 	[SocketServerEvent.CLIENT_CONNECTED]: (options: { socket: Socket; portDescription: IncomingConnectionType }) => void

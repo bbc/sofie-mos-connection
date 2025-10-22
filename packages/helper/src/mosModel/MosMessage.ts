@@ -1,6 +1,6 @@
 import { getMosTypes, MosTypes } from '@mos-connection/model'
 import * as XMLBuilder from 'xmlbuilder'
-import { addTextElementInternal } from '../utils/Utils'
+import { addTextElementInternal } from '../utils/Utils.js'
 
 export type PortType = 'upper' | 'lower' | 'query'
 export abstract class MosMessage {

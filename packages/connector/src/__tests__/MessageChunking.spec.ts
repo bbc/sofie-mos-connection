@@ -12,7 +12,7 @@ import {
 	mosTypes,
 	sendFakeIncomingMessage,
 	setupMocks,
-} from './lib'
+} from './lib.js'
 import {
 	IMOSListMachInfo,
 	IMOSObject,
@@ -21,9 +21,9 @@ import {
 	IMOSRunningOrder,
 	MosConnection,
 	MosDevice,
-} from '..'
-import { SocketMock } from '../__mocks__/socket'
-import { xmlData, xmlApiData } from '../__mocks__/testData'
+} from '../index.js'
+import { SocketMock } from '../__mocks__/socket.js'
+import { xmlData, xmlApiData } from '../__mocks__/testData.js'
 
 beforeAll(() => {
 	setupMocks()

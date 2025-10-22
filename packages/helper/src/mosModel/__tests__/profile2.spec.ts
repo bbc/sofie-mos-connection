@@ -6,7 +6,7 @@ import {
 	IMOSROStory,
 	IMOSRunningOrder,
 } from '@mos-connection/model'
-import { getXMLString } from './lib'
+import { getXMLString } from './lib.js'
 import {
 	ROAck,
 	ROInsertStories,
@@ -21,8 +21,8 @@ import {
 	ROSwapItems,
 	ROCreate,
 	RODelete,
-} from '../profile2'
-import { literal } from '../lib'
+} from '../profile2/index.js'
+import { literal } from '../lib.js'
 
 describe('Profile 2', () => {
 	const mosTypes = getMosTypes(true)

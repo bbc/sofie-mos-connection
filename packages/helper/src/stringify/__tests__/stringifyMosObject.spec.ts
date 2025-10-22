@@ -5,8 +5,8 @@ import {
 	IMOSDuration,
 	IMOSTime,
 	getMosTypes,
-} from '../../../../helper/src'
-import {} from '../stringifyMosObject'
+} from '../../../../helper/src/index.js'
+import {} from '../stringifyMosObject.js'
 
 function assertTypes<_A extends _B, _B>(): void {
 	// nothing, just a type check

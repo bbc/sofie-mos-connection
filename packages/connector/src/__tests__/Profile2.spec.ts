@@ -15,7 +15,7 @@ import {
 	getXMLReply,
 	mosTypes,
 	setupMocks,
-} from './lib'
+} from './lib.js'
 import {
 	MosConnection,
 	MosDevice,
@@ -36,10 +36,10 @@ import {
 	IMOSObjectAirStatus,
 	IMOSScope,
 	IMOSString128,
-} from '..'
-import { SocketMock } from '../__mocks__/socket'
-import { ServerMock } from '../__mocks__/server'
-import { xmlData, xmlApiData } from '../__mocks__/testData'
+} from '../index.js'
+import { SocketMock } from '../__mocks__/socket.js'
+import { ServerMock } from '../__mocks__/server.js'
+import { xmlData, xmlApiData } from '../__mocks__/testData.js'
 import { xml2js } from 'xml-js'
 
 /* eslint-disable @typescript-eslint/no-unused-vars */

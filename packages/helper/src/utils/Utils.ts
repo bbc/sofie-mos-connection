@@ -8,7 +8,7 @@ import {
 	IMOSTime,
 	stringifyMosType,
 } from '@mos-connection/model'
-import { MosModel } from '..'
+import { MosModel } from '../index.js'
 
 export function xml2js(messageString: string): MosModel.AnyXMLObject {
 	const object = xmlParser(messageString, {

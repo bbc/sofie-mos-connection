@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/unbound-method */
-import { clearMocks, decode, delay, encode, getMessageId, getXMLReply, initMosConnection, setupMocks } from './lib'
-import { SocketMock } from '../__mocks__/socket'
-import { ServerMock } from '../__mocks__/server'
-import { xmlData, xmlApiData } from '../__mocks__/testData'
-import { MosConnection, MosDevice, IMOSObject, IMOSConnectionStatus, ConnectionConfig } from '../'
+import { clearMocks, decode, delay, encode, getMessageId, getXMLReply, initMosConnection, setupMocks } from './lib.js'
+import { SocketMock } from '../__mocks__/socket.js'
+import { ServerMock } from '../__mocks__/server.js'
+import { xmlData, xmlApiData } from '../__mocks__/testData.js'
+import { MosConnection, MosDevice, IMOSObject, IMOSConnectionStatus, ConnectionConfig } from '../.js'
 
 // @ts-ignore imports are unused
 import { Socket } from 'net'

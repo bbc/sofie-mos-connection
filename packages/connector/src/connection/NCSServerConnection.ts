@@ -1,8 +1,8 @@
-import { ConnectionType } from './socketConnection'
-import { MosSocketClient, CallBackFunction, QueueMessage } from '../connection/mosSocketClient'
+import { ConnectionType } from './socketConnection.js'
+import { MosSocketClient, CallBackFunction, QueueMessage } from '../connection/mosSocketClient.js'
 import { MosModel } from '@mos-connection/helper'
 import { EventEmitter } from 'eventemitter3'
-import { ParsedMosMessage } from './mosMessageParser'
+import { ParsedMosMessage } from './mosMessageParser.js'
 
 export const DEFAULT_COMMAND_TIMEOUT = 5000
 

@@ -1,6 +1,6 @@
 import { getMosTypes } from '@mos-connection/model'
-import { getXMLString } from './lib'
-import { HeartBeat, ListMachineInfo, ReqMachInfo } from '../profile0'
+import { getXMLString } from './lib.js'
+import { HeartBeat, ListMachineInfo, ReqMachInfo } from '../profile0/index.js'
 
 describe('Profile 0', () => {
 	const mosTypes = getMosTypes(true)

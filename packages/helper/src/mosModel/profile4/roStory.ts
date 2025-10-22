@@ -1,9 +1,9 @@
 import * as XMLBuilder from 'xmlbuilder'
-import { MosMessage } from '../MosMessage'
+import { MosMessage } from '../MosMessage.js'
 import { IMOSROFullStory, IMOSItem } from '@mos-connection/model'
-import { XMLROStoryBase } from '../profile2/xmlConversion'
-import { XMLMosExternalMetaData, XMLMosObjects, XMLObjectPaths } from '../profile1/xmlConversion'
-import { addTextElementInternal } from '../../utils/Utils'
+import { XMLROStoryBase } from '../profile2/xmlConversion.js'
+import { XMLMosExternalMetaData, XMLMosObjects, XMLObjectPaths } from '../profile1/xmlConversion.js'
+import { addTextElementInternal } from '../../utils/Utils.js'
 
 export class ROStory extends MosMessage {
 	/** */

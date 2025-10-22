@@ -1,5 +1,5 @@
 import * as XMLBuilder from 'xmlbuilder'
-import { MosMessage } from '../MosMessage'
+import { MosMessage } from '../MosMessage.js'
 import {
 	IMOSStoryAction,
 	IMOSROStory,
@@ -8,8 +8,8 @@ import {
 	IMOSROAction,
 	IMOSString128,
 } from '@mos-connection/model'
-import { XMLROStory, XMLMosItem } from './xmlConversion'
-import { addTextElementInternal } from '../../utils/Utils'
+import { XMLROStory, XMLMosItem } from './xmlConversion.js'
+import { addTextElementInternal } from '../../utils/Utils.js'
 
 export abstract class MosSendMessage extends MosMessage {
 	constructor(strict: boolean) {

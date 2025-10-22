@@ -1,4 +1,4 @@
-import { convertEmptyObjectToString, xml2js } from '../Utils'
+import { convertEmptyObjectToString, xml2js } from '../Utils.js'
 
 test('xml2js with junk', () => {
 	const o: any = xml2js(`

@@ -1,4 +1,4 @@
-import { ParseError } from '../mosModel/ParseError'
+import { ParseError } from '../mosModel/ParseError.js'
 
 describe('ParseError', () => {
 	function throwsError() {
